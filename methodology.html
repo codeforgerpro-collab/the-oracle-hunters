@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology · The Oracle Hunters</title><meta name="description" content="How statements are collected, classified, timestamped and scored.">
+<meta property="og:title" content="Methodology · The Oracle Hunters"><meta property="og:description" content="How statements are collected, classified, timestamped and scored.">
+<meta property="og:type" content="website"><meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="The Oracle Hunters" href="feed.xml">
+<link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="assets/style.css"></head><body>
+<header><div class="wrap"><a class="brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="44" height="44" role="img" aria-label="The Oracle Hunters">
+<circle cx="32" cy="32" r="30" fill="#121a30" stroke="#c99a4a" stroke-width="2"/>
+<path d="M14 12 Q34 32 14 52" fill="none" stroke="#b9c8e6" stroke-width="3" stroke-linecap="round"/>
+<line x1="14" y1="12" x2="14" y2="52" stroke="#b9c8e6" stroke-width="1.2"/>
+<line x1="10" y1="32" x2="40" y2="32" stroke="#c99a4a" stroke-width="2.4"/><path d="M40 27 L48 32 L40 37 Z" fill="#c99a4a"/>
+<path d="M44 40 h12 M46 40 l-3 14 M54 40 l3 14 M50 40 v14" stroke="#b9c8e6" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M43 40 q7 -7 14 0" fill="none" stroke="#b9c8e6" stroke-width="2"/></svg><span><b>The Oracle Hunters</b><small>Every prophecy, on the record.</small></span></a>
+<nav><a href="index.html">Home</a><a href="ledger.html">Oracle Ledger</a><a href="speakers.html">Report Cards</a><a href="ai-board.html">AI Warnings</a><a href="markets.html">Market Reaction</a><a href="uturns.html">U-turns &amp; Goalposts</a><a href="methodology.html">Methodology</a><a href="about.html">About</a></nav></div></header><main class="wrap"><h1>Methodology</h1><p class="lead">The framework is Professor Dimitrios Thomakos's: <i>Ars Prognostica — The Origins, Evolution, and
+Formalization of Prediction</i> (2026) and <i>Intelligence Without Wisdom — Practical Judgment and the Epistemology of AI Risk Claims</i> (2026).
+The Oracle Hunters applies it; any error in the application is ours.</p>
+<h2>1. What is collected</h2><p>Speeches and statements from official, primary sources only: central banks (ECB, Federal Reserve, Bank of England,
+central bankers via the BIS), governments (GOV.UK, the White House, the Greek Prime Minister's office, the European Commission and the official
+government sources verified for Proxenos LinkLab) and AI companies' own statements. Each document keeps two UTC timestamps: when it was said or
+published, and when we captured it. Documents whose publication date cannot be read are marked “first seen”. The first run went back
+365 days.</p>
+<h2>2. Which sentences</h2><p>From each document we keep up to 6 forward-looking sentences: those that speak about the future
+(future tense, expectations, projections, horizons, probabilities) or that prescribe action. Procedural sentences (“I will now turn to…”) are excluded.</p>
+<h2>3. How each statement is classified</h2>
+<p><b>Speech act</b> — forecast, scenario, conjecture, strategic announcement, policy prescription, or a combination (six-fold classification).<br>
+<b>Claim tier</b> — possibility, mechanism, forecast, policy (four-tier hierarchy: each needs a different kind of evidence).<br>
+<b>Axis</b> — <i>empirical</i> (rests on data, figures, projections), <i>abductive</i> (a conjecture or scenario), <i>oracular</i> (asserted on
+authority, no evidence named).</p>
+<h2>4. Testability</h2><p>Four checks: a defined event, a dated horizon, a probability (stated or verbal), a measurable indicator.
+4/4 = <b>Testable</b>; 2-3 = <b>Partly testable</b>; 0-1 = <b>Unresolvable as stated</b>. Vague horizons (“over time”, “in the medium term”) do not count.</p>
+<h2>5. Ambiguity Meter</h2><p>A practical version of the ambivalence function (entropy over the readings a statement allows): the number of readings
+grows with hedges (may, could, gradually…) and with each missing element (event, horizon, probability). Ambiguity = log₂(readings), scaled 0-100.
+It is a proxy, published so that anyone can check it.</p>
+<h2>6. Verbal probabilities</h2><p>Words are converted to numbers with this published table (an explicit “x% chance” always wins):</p>
+<table style="max-width:420px"><tr><th>Phrase</th><th>Probability</th></tr><tr><td>“virtually certain”</td><td>0.99</td></tr><tr><td>“almost certainly”</td><td>0.95</td></tr><tr><td>“highly likely”</td><td>0.90</td></tr><tr><td>“very likely”</td><td>0.90</td></tr><tr><td>“highly unlikely”</td><td>0.10</td></tr><tr><td>“very unlikely”</td><td>0.10</td></tr><tr><td>“most likely”</td><td>0.80</td></tr><tr><td>“more likely than not”</td><td>0.60</td></tr><tr><td>“unlikely”</td><td>0.25</td></tr><tr><td>“likely”</td><td>0.70</td></tr><tr><td>“probably”</td><td>0.70</td></tr><tr><td>“probable”</td><td>0.70</td></tr><tr><td>“expected”</td><td>0.70</td></tr><tr><td>“expects”</td><td>0.70</td></tr><tr><td>“expect”</td><td>0.70</td></tr><tr><td>“anticipate”</td><td>0.70</td></tr><tr><td>“projected”</td><td>0.70</td></tr><tr><td>“forecast”</td><td>0.70</td></tr><tr><td>“going to”</td><td>0.80</td></tr><tr><td>“will”</td><td>0.85</td></tr><tr><td>“shall”</td><td>0.85</td></tr><tr><td>“may”</td><td>0.40</td></tr><tr><td>“might”</td><td>0.35</td></tr><tr><td>“could”</td><td>0.35</td></tr><tr><td>“possibly”</td><td>0.35</td></tr><tr><td>“possible”</td><td>0.35</td></tr><tr><td>“remote”</td><td>0.05</td></tr><tr><td>“αναμένεται”</td><td>0.70</td></tr><tr><td>“προβλέπεται”</td><td>0.70</td></tr><tr><td>“πιθανόν”</td><td>0.60</td></tr><tr><td>“πιθανώς”</td><td>0.60</td></tr><tr><td>“θα”</td><td>0.85</td></tr></table>
+<h2>7. Resolution and scoring</h2><p>When a forecast's horizon passes it becomes <b>Due for review</b>. An editor resolves it against official data
+(came true / partly / did not / unresolvable) and links the evidence. Calibration is the Brier score — the mean of (probability − outcome)², a proper
+scoring rule, so it rewards honest probabilities rather than confident-sounding ones. A score is shown only after 10 resolved forecasts.</p>
+<h2>8. U-turns, goalposts, market reaction, AI warnings</h2><p>Possible U-turns (same speaker, same topic, opposite direction within 180 days) are
+found automatically but published only after an editor confirms them. Goalpost moves are recorded by an editor. Market reaction shows bond-yield
+moves around central-bank speeches — context, not causation. AI warnings are put through the six-point public-warrant test.</p>
+<h2>9. Rules we keep</h2><p>Primary sources first · the same tests for optimists and pessimists, every party, every country · the original words
+always next to their classification · labels judge the claim, never the person · a public corrections log and a right of reply · short excerpts
+with a link to the full source.</p></main>
+<footer><div class="wrap">All times are UTC. Built 13 Nov 2026 18:10 UTC. Every quote is a short excerpt that links to its official source.
+Methodology: Professor Dimitrios Thomakos (<i>Ars Prognostica</i>; <i>Intelligence Without Wisdom</i>) · A Tekmerion project · Sister site: <a href="https://athenaglauxintelligence.news/">ATHENA News Room</a>.<br>
+<a href="corrections.html">Corrections &amp; right of reply</a> · <a href="privacy.html">Privacy</a> ·
+<a href="feed.xml">RSS</a> · <a href="https://codeforgerpro-collab.github.io/the-oracle-hunters/">https://codeforgerpro-collab.github.io/the-oracle-hunters/</a> · v1.0.0</div></footer></body></html>

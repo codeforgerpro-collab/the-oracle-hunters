@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://codeforgerpro-collab.github.io/the-oracle-hunters/sitemap.xml
