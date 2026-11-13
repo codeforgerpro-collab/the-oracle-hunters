@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evidence · The Oracle Hunters</title><meta name="description" content="The evidence behind one statement: source, timestamps, fingerprint and reasons.">
+<meta property="og:title" content="Evidence · The Oracle Hunters"><meta property="og:description" content="The evidence behind one statement: source, timestamps, fingerprint and reasons.">
+<meta property="og:type" content="website"><meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="The Oracle Hunters" href="feed.xml">
+<link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="assets/style.css"></head><body>
+<header><div class="wrap"><a class="brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="44" height="44" role="img" aria-label="The Oracle Hunters">
+<circle cx="32" cy="32" r="30" fill="#121a30" stroke="#c99a4a" stroke-width="2"/>
+<path d="M14 12 Q34 32 14 52" fill="none" stroke="#b9c8e6" stroke-width="3" stroke-linecap="round"/>
+<line x1="14" y1="12" x2="14" y2="52" stroke="#b9c8e6" stroke-width="1.2"/>
+<line x1="10" y1="32" x2="40" y2="32" stroke="#c99a4a" stroke-width="2.4"/><path d="M40 27 L48 32 L40 37 Z" fill="#c99a4a"/>
+<path d="M44 40 h12 M46 40 l-3 14 M54 40 l3 14 M50 40 v14" stroke="#b9c8e6" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M43 40 q7 -7 14 0" fill="none" stroke="#b9c8e6" stroke-width="2"/></svg><span><b>The Oracle Hunters</b><small>Every prophecy, on the record.</small></span></a>
+<nav><a href="index.html">Home</a><a href="forecasts.html">Forecast Scoreboard</a><a href="ledger.html">Ledger</a><a href="speakers.html">Report Cards</a><a href="ai-board.html">AI Warnings</a><a href="analytics.html">Analytics</a><a href="transparency.html">Transparency</a><a href="guide.html">How to read</a><a href="methodology.html">Methodology</a><a href="about.html">About</a></nav></div></header><main class="wrap"><div id="st"><p class="small">Loading…</p></div><script>
+const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+const id=parseInt(new URLSearchParams(location.search).get('id')||'0');
+fetch('data/s/'+Math.floor(id/1000)+'.json').then(r=>r.json()).then(j=>{const x=j[id];const o=document.getElementById('st');
+ if(!x){o.innerHTML='<p>This statement is not in the public ledger.</p>';return}
+ document.title=x.sp+' - evidence · The Oracle Hunters';
+ o.innerHTML=`<p class="small"><a href="speakers/${e(x.ss)}.html">← ${e(x.sp)}</a></p><h1>Evidence</h1>
+ <div class="card">${x.prev?`<div class="small">…${e(x.prev)}</div>`:''}<div class="q">${e(x.q)}</div>${x.next?`<div class="small">${e(x.next)}…</div>`:''}
+ <div class="meta"><a href="speakers/${e(x.ss)}.html">${e(x.sp)}</a>${x.kind=='institution'?' (institution - no named speaker)':''} · ${e(x.in)}</div></div>
+ ${x.v?`<div class="verdict v-${e(x.st)}"><b>${e(x.stl)}.</b> ${e(x.v)} ${x.vu?`<a href="${e(x.vu)}" target="_blank" rel="nofollow noopener">official data</a>`:''} <span class="small">· checked ${e(x.vat)} UTC · ${e(x.vm)}</span></div>`:`<div class="verdict"><b>${e(x.stl)}.</b> ${x.h?'Deadline '+e(x.h)+'.':''}</div>`}
+ <h2>Where it comes from</h2><table>
+ <tr><th>Official source</th><td><a href="${e(x.u)}" target="_blank" rel="nofollow noopener">${e(x.title)}</a></td></tr>
+ <tr><th>Archived copy</th><td><a href="https://web.archive.org/web/${e(x.t.replace(/[-: T]/g,'').slice(0,8))}/${e(x.u)}" target="_blank" rel="nofollow noopener">Internet Archive (nearest copy to the date it was said)</a></td></tr>
+ <tr><th>Said / published</th><td>${e(x.t)} UTC${x.fs?' (date first seen by us - the page gives no date)':''}</td></tr>
+ <tr><th>Captured by us</th><td>${e(x.cap)} UTC</td></tr><tr><th>Classified</th><td>${e(x.an)} UTC · method ${e(x.m)}</td></tr>
+ <tr><th>Fingerprint of the captured text (SHA-256)</th><td class="mono">${e(x.sha)}</td></tr>
+ <tr><th>Daily seal</th><td><a href="seals.html">${e(x.cap.slice(0,10))}</a> - proves the record existed on that day and has not been changed</td></tr></table>
+ <h2>Why it is classified this way</h2><ul>${x.why.map(w=>`<li>${e(w)}</li>`).join('')}</ul>
+ <p class="small">Think this is wrong? <a href="corrections.html">Ask for a correction or reply</a> - every change is logged in the <a href="changes.html">change history</a>.</p>`;
+});</script></main>
+<footer><div class="wrap">All times are UTC. Page updated <!--b-->13 Nov 2026 21:12 UTC<!--/b-->. Every quote is a short excerpt that links to its official source.
+Methodology: Professor Dimitrios Thomakos (<i>Ars Prognostica</i>; <i>Intelligence Without Wisdom</i>) · A Tekmerion project · Sister site: <a href="https://athenaglauxintelligence.news/">ATHENA News Room</a>.<br>
+<a href="markets.html">Market reaction</a> · <a href="uturns.html">U-turns &amp; goalposts</a> · <a href="changes.html">Change history</a> ·
+<a href="corrections.html">Corrections &amp; right of reply</a> · <a href="privacy.html">Privacy</a> ·
+<a href="feed.xml">RSS</a> · <a href="https://codeforgerpro-collab.github.io/the-oracle-hunters/">https://codeforgerpro-collab.github.io/the-oracle-hunters/</a> · v2.0.1</div></footer></body></html>
