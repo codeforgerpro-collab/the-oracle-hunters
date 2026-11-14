@@ -22,9 +22,9 @@ header .wrap{display:flex;align-items:center;gap:18px;padding:14px 28px 0;flex-w
 .brand b{display:block;font:600 23px/1.1 var(--serif);letter-spacing:.02em}
 .brand small{display:block;color:var(--mute);font:12.5px/1.35 var(--sans);margin-top:3px;letter-spacing:.02em}
 .brand small i{font-style:normal;color:var(--gold)}
-nav{display:flex;gap:2px;flex-wrap:wrap;font:600 12px/1 var(--sans);letter-spacing:.055em;text-transform:uppercase}
+nav{display:flex;gap:0;flex-wrap:wrap;justify-content:space-between;font:600 11.5px/1 var(--sans);letter-spacing:.04em;text-transform:uppercase}
 header nav{width:100%;margin:12px 0 0;padding:0;border-top:1px solid var(--line)}
-nav a{color:var(--mute);text-decoration:none;padding:13px 9px 12px;border-bottom:2px solid transparent}nav a:first-child{padding-left:0}nav a:hover{color:var(--ink)}
+nav a{color:var(--mute);text-decoration:none;padding:13px 6px 12px;border-bottom:2px solid transparent}nav a:first-child{padding-left:0}nav a:hover{color:var(--ink)}
 nav a.on{color:var(--ink);border-bottom-color:var(--gold)}
 .tools{display:flex;gap:8px;align-items:center;margin-left:auto}.gs{position:relative}.gs input{width:240px;padding-left:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%238e9ab4' stroke-width='2'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath d='M9.5 9.5 13 13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:11px 50%}
 #gres{display:none;position:absolute;right:0;top:42px;width:360px;background:var(--panel);border:1px solid var(--line2);border-radius:12px;z-index:30;box-shadow:0 18px 48px rgba(0,0,0,.45);overflow:hidden}
@@ -118,6 +118,16 @@ html[data-theme=light] body:before{background:none}html[data-theme=light] header
 html[data-theme=light] .util a{color:#c9d1e3}html[data-theme=light] footer{background:#14213d;color:#b7c0d6}html[data-theme=light] footer a{color:#e8ecf4}
 html[data-theme=light] a:hover{color:#0b1020}html[data-theme=light] .chart{background:#0f1729}html[data-theme=light] .paper .cv{background:linear-gradient(160deg,#1c2a4c,#0d1530)}
 html[data-theme=light] tbody tr:nth-child(even) td,html[data-theme=light] table tr:nth-child(even) td{background:rgba(20,28,51,.02)}
+/* ---- the nine words */
+.tag.gw{background:rgba(201,164,92,.14);border-color:rgba(201,164,92,.55);color:var(--gold);text-decoration:none;font-weight:600}
+.tag.gw-bad{background:rgba(224,106,106,.12);border-color:rgba(224,106,106,.6);color:#e58b8b;text-decoration:none;font-weight:600}
+.nine{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 8px}@media(max-width:720px){.nine{grid-template-columns:1fr 1fr}}
+.nine .nw b{display:flex;align-items:baseline;gap:10px}.nine .nw b+i{margin-top:-2px}
+.nine .nw{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--line2);border-radius:6px;text-decoration:none;color:var(--ink);background:var(--card,rgba(255,255,255,.02))}
+.nine .nw:hover{border-color:var(--gold)}.nine .nw b{font:600 20px/1.2 var(--serif);color:var(--gold)}.nine .nw i{font-size:12px;color:var(--mute)}
+.nine .nw span{font-size:13px;color:var(--ink2,var(--ink))}.nine .nw em{font-style:normal;font-weight:600;margin-top:4px}.nine .nw em small{font-weight:400;color:var(--mute)}
+.companion{border:1px solid rgba(201,164,92,.5);border-radius:8px;padding:20px 24px;margin:18px 0 26px;background:linear-gradient(135deg,rgba(201,164,92,.10),rgba(201,164,92,.02))}
+.companion h3{margin:4px 0 8px;font-family:var(--serif);font-size:24px}.companion .btn{display:inline-block;margin-top:6px;padding:9px 16px;border-radius:6px;background:var(--gold);color:#0b1121;text-decoration:none;font-weight:600}
 /* ---- scoreboard: every row and number opens the statements behind it */
 .board tr.go td a{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(201,164,92,.45)}
 .board tr.go td a:hover{color:var(--gold);border-bottom-color:var(--gold)}

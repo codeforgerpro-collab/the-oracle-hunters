@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding The Oracle — An Interactive Companion to Ars Prognostica</title>
+<link rel="canonical" href="https://codeforgerpro-collab.github.io/the-oracle-hunters/understanding-the-oracle.html"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><meta name="description" content="An interactive companion to Ars Prognostica and Intelligence Without Wisdom: the nine Greek words for prediction, Bayes, entropy, ambivalence, phronesis, POMDP.">
+<style>
+:root{--deep-blue:#1B3769;--royal-blue:#2D5AA0;--gold:#B8860B;--gold-bright:#C9A227;--ink:#2A2A2A;--slate:#4A5568;--paper:#FAF6EE;--paper-light:#FFFCF5;--border:#D4C9B0;--accent-red:#8C1E28;--accent-green:#1E643C;--accent-purple:#5A2878;--accent-orange:#A0522D}
+*{box-sizing:border-box}
+body{font-family:'Palatino Linotype','Book Antiqua',Palatino,Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.65;margin:0;padding:0}
+header{background:linear-gradient(135deg,var(--deep-blue),var(--royal-blue));color:white;padding:3rem 1.5rem 1.5rem;text-align:center;border-bottom:4px solid var(--gold)}
+header h1{font-size:2.6rem;margin:0 0 .3rem;letter-spacing:.5px;font-weight:500}
+header .subtitle{font-size:1.15rem;opacity:.9;font-style:italic;margin:0}
+header .greek{font-size:1rem;opacity:.8;margin-top:.8rem;letter-spacing:2px}
+nav{background:rgba(0,0,0,.15);margin-top:1.5rem;padding:.7rem .5rem;border-radius:30px;display:flex;justify-content:center;flex-wrap:wrap;gap:.3rem;max-width:1000px;margin-left:auto;margin-right:auto}
+nav a{color:white;text-decoration:none;padding:.35rem .85rem;border-radius:20px;font-size:.85rem;transition:all .15s;display:inline-block;white-space:nowrap}
+nav a:hover{background:var(--gold)}
+main{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.qa{background:var(--paper-light);border:1px solid var(--border);border-radius:12px;margin-bottom:2rem;box-shadow:0 2px 8px rgba(27,55,105,.05);overflow:hidden}
+.q{background:linear-gradient(to right,#EDE5D3,#F5EEDF);padding:1.2rem 1.5rem;border-bottom:2px solid var(--gold);font-size:1.15rem;font-weight:600;color:var(--deep-blue);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.q:hover{background:linear-gradient(to right,#E5DBC2,#EDE5D3)}
+.q .toggle{color:var(--gold);font-size:1.4rem;transition:transform .2s}
+.q.collapsed .toggle{transform:rotate(-90deg)}
+.a{padding:1.5rem}
+.a.collapsed{display:none}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;padding:1rem;background:#F0EADB;border-radius:8px}
+.control{display:flex;flex-direction:column}
+.control label{font-size:.85rem;font-weight:600;color:var(--deep-blue);margin-bottom:.3rem;display:flex;justify-content:space-between}
+.control label .value{color:var(--gold);font-family:'Courier New',monospace}
+input[type=range]{width:100%;accent-color:var(--royal-blue);cursor:pointer}
+select{padding:.5rem;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:.95rem;background:white;color:var(--ink)}
+select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.result{background:linear-gradient(135deg,#EDE5D3,#F5EEDF);border-left:4px solid var(--gold);padding:1rem 1.2rem;margin:1rem 0;border-radius:0 8px 8px 0}
+.result .label{font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:.3rem}
+.result .value{font-size:1.6rem;font-weight:600;color:var(--deep-blue);font-family:'Courier New',monospace}
+.result .formula{font-size:.85rem;color:var(--slate);font-style:italic;margin-top:.3rem}
+.result .note{font-size:.82rem;color:var(--slate);margin-top:.5rem;padding-top:.4rem;border-top:1px dashed var(--border)}
+svg.chart{display:block;width:100%;max-width:100%;height:auto;background:white;border:1px solid var(--border);border-radius:8px;margin:.5rem 0}
+.terms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.6rem;margin:1rem 0}
+.term-card{background:white;border:1px solid var(--border);border-radius:8px;padding:.8rem;cursor:pointer;transition:all .15s}
+.term-card:hover{border-color:var(--gold);background:#FDFBF5}
+.term-card.selected{border-color:var(--gold);background:#F5EEDF;box-shadow:0 0 0 2px rgba(184,134,11,.2)}
+.term-card .greek{font-size:1.2rem;color:var(--deep-blue);font-weight:600;margin-bottom:.2rem}
+.term-card .translit{font-style:italic;color:var(--slate);font-size:.85rem;margin-bottom:.3rem}
+.term-card .meaning{font-size:.8rem;color:var(--slate);line-height:1.35}
+.term-detail{background:#F0EADB;border-left:4px solid var(--gold);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;min-height:100px}
+.term-detail h4{margin:0 0 .5rem;color:var(--deep-blue)}
+.term-detail .axis-tag{display:inline-block;padding:.15rem .6rem;border-radius:12px;font-size:.75rem;font-weight:600;color:white;margin-left:.5rem;vertical-align:middle}
+.axis-theocentric{background:var(--accent-red)}.axis-empirical{background:var(--royal-blue)}.axis-speculative{background:var(--accent-green)}.axis-meta{background:var(--accent-purple)}.axis-pathology{background:var(--accent-orange)}
+.mode-tabs{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}
+.mode-tab{padding:.6rem 1.2rem;border:1px solid var(--border);background:white;border-radius:6px;cursor:pointer;font-family:inherit;font-size:.95rem;transition:all .15s}
+.mode-tab:hover{border-color:var(--gold)}
+.mode-tab.active{background:var(--deep-blue);color:white;border-color:var(--deep-blue)}
+.tier-card{border-left:6px solid;padding:1rem 1.2rem;margin-bottom:.7rem;background:white;border-radius:0 8px 8px 0}
+.tier-1{border-color:#8C1E28}.tier-2{border-color:#B8860B}.tier-3{border-color:#2D5AA0}.tier-4{border-color:#1E643C}
+.tier-card h4{margin:0 0 .5rem;color:var(--deep-blue)}
+.tier-card p{margin:.3rem 0;font-size:.92rem}
+.tier-card .example{font-style:italic;color:var(--slate);font-size:.88rem;margin-top:.5rem}
+.tuple-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.5rem;margin:1rem 0}
+.tuple-card{background:white;border:1px solid var(--border);border-radius:8px;padding:.8rem;text-align:center;cursor:pointer;transition:all .15s}
+.tuple-card:hover{border-color:var(--gold)}
+.tuple-card.selected{border-color:var(--gold);background:#F5EEDF;box-shadow:0 0 0 2px rgba(184,134,11,.2)}
+.tuple-card .symbol{font-size:1.8rem;color:var(--deep-blue);font-weight:600;font-family:'Courier New',monospace;margin-bottom:.3rem}
+.tuple-card .name{font-size:.78rem;color:var(--slate)}
+.tuple-detail{background:#F0EADB;border-left:4px solid var(--gold);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;min-height:80px}
+.tuple-detail h4{margin:0 0 .5rem;color:var(--deep-blue)}
+.corr-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.corr-table th,.corr-table td{padding:.6rem;text-align:left;border-bottom:1px solid var(--border)}
+.corr-table th{background:#EDE5D3;color:var(--deep-blue);font-weight:600}
+.corr-table td:first-child{font-weight:500;color:var(--slate)}
+.corr-table td:nth-child(2){color:var(--royal-blue);font-family:'Courier New',monospace}
+.corr-table td:nth-child(3){color:var(--accent-purple);font-family:'Courier New',monospace}
+footer{background:var(--deep-blue);color:#C8D4E8;text-align:center;padding:2rem 1rem;font-size:.85rem}
+footer a{color:var(--gold-bright);text-decoration:none}
+.intro{font-size:1.05rem;color:var(--slate);margin-bottom:2rem;padding:1rem 1.5rem;background:linear-gradient(to right,#F5EEDF,#FAF6EE);border-left:4px solid var(--gold);border-radius:0 8px 8px 0}
+@media (max-width:640px){header h1{font-size:1.8rem}header .subtitle{font-size:1rem}.controls{grid-template-columns:1fr}.terms-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}.tuple-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}main{padding:1rem}.a{padding:1rem}nav{border-radius:12px}}
+</style>
+</head>
+<body>
+<div style="background:#090e1b;padding:10px 18px;font:600 13px/1.4 system-ui,sans-serif;letter-spacing:.04em"><a href="methodology.html#understanding" style="color:#c9a45c;text-decoration:none">← The Oracle Hunters · Methodology</a><a href="index.html" style="color:#aab4c8;text-decoration:none;float:right">Home</a></div>
+<header>
+  <h1>Understanding The Oracle</h1>
+  <p class="subtitle">An interactive companion to <em>Ars Prognostica</em></p>
+  <p class="greek">ΤΕΧΝΗ ΠΡΟΓΝΩΣΕΩΣ</p>
+  <nav>
+    <a href="#q1">1. Vocabulary</a><a href="#q2">2. Three Modes</a><a href="#q3">3. Bayes</a><a href="#q4">4. Entropy</a><a href="#q5">5. Ambivalence</a><a href="#q6">6. Trade-off</a><a href="#q7">7. Quantum</a><a href="#q8">8. Phronesis</a><a href="#q9">9. Four Tiers</a><a href="#q10">10. Speech Acts</a><a href="#q11">11. POMDP</a><a href="#q12">12. QDPOMDP</a>
+  </nav>
+</header>
+<main>
+<div class="intro">
+  This page is a small interactive companion to the monograph <em>Τέχνη Προγνώσεως / Ars Prognostica</em> and the paper <em>Intelligence Without Wisdom</em>. It asks twelve questions, and each has an interactive answer. All probability distributions obey the rules the monograph develops. Nothing here replaces the argument of the book. It is meant to make the argument tangible.
+</div>
+
+<section class="qa" id="q1">
+  <div class="q" onclick="toggle(this)"><span>1. Why did the Greeks have nine words for prediction?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>Where English has a single word — "prediction" — the Greeks had a family. Each term named a distinct cognitive modality, with its own source of warrant, inferential form, criterion of success, and characteristic failure mode. The differentiation is not a curiosity of antiquity. It is a diagnostic architecture that we have collapsed into a single word.</p>
+    <p>Click any term to see what it names. Note the tenth entry — προεξόφλησις — which is not a mode of prediction but a <em>failure mode</em> of the abductive mode: the collapse of a conjecture into apparent certainty.</p>
+    <div class="terms-grid" id="term-grid"></div>
+    <div class="term-detail" id="term-detail"><p style="color:var(--slate);font-style:italic">Select a term above to see its source, inferential form, criterion, and failure mode.</p></div>
+  </div>
+</section>
+
+<section class="qa" id="q2">
+  <div class="q" onclick="toggle(this)"><span>2. What are the three modes of prediction?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The monograph reconstructs the Greek vocabulary as a tripartite taxonomy: a <strong>theocentric</strong> mode, an <strong>empirical</strong> mode, and a <strong>speculative</strong> mode. Each mode has a different structure — and a different failure mode.</p>
+    <div class="mode-tabs">
+      <button class="mode-tab active" onclick="showMode('theocentric',this)">Theocentric</button>
+      <button class="mode-tab" onclick="showMode('empirical',this)">Empirical</button>
+      <button class="mode-tab" onclick="showMode('speculative',this)">Speculative</button>
+    </div>
+    <div id="mode-content"></div>
+  </div>
+</section>
+
+<section class="qa" id="q3">
+  <div class="q" onclick="toggle(this)"><span>3. How should belief be updated in light of new evidence?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>Bayes' rule is the formal answer. The three sliders below are independent conditional probabilities — P(H) is the prior, P(E|H) is the likelihood, P(E|¬H) is the false-positive rate. They need not sum to any particular value, because they answer different questions.</p>
+    <div class="controls">
+      <div class="control"><label>Prior P(H) <span class="value" id="prior-val">0.30</span></label><input type="range" id="prior" min="0.01" max="0.99" step="0.01" value="0.30"></div>
+      <div class="control"><label>Likelihood P(E|H) <span class="value" id="lik-val">0.80</span></label><input type="range" id="lik" min="0.01" max="0.99" step="0.01" value="0.80"></div>
+      <div class="control" style="grid-column:1/-1"><label>False positive P(E|¬H) <span class="value" id="fp-val">0.10</span></label><input type="range" id="fp" min="0.01" max="0.99" step="0.01" value="0.10"></div>
+    </div>
+    <div class="result">
+      <div class="label">Posterior P(H|E)</div>
+      <div class="value" id="posterior">—</div>
+      <div class="formula">P(H|E) = P(E|H)·P(H) / [P(E|H)·P(H) + P(E|¬H)·P(¬H)]</div>
+    </div>
+    <svg class="chart" id="bayes-chart" viewBox="0 0 600 240"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q4">
+  <div class="q" onclick="toggle(this)"><span>4. What is uncertainty, and how is it measured?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>Uncertainty is the entropy of a probability distribution. The four sliders below define a distribution over four outcomes — <strong>they must sum to 1</strong>. When you move one slider up, the other three automatically renormalize.</p>
+    <div class="controls">
+      <div class="control" style="grid-column:1/-1">
+        <label>Distribution over 4 outcomes <span style="color:var(--slate);font-weight:400">(sum = 1.00)</span></label>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:.5rem">
+          <div><label style="font-size:.8rem">A: <span id="pa-val">0.25</span></label><input type="range" id="pa" min="0.01" max="0.97" step="0.01" value="0.25"></div>
+          <div><label style="font-size:.8rem">B: <span id="pb-val">0.25</span></label><input type="range" id="pb" min="0.01" max="0.97" step="0.01" value="0.25"></div>
+          <div><label style="font-size:.8rem">C: <span id="pc-val">0.25</span></label><input type="range" id="pc" min="0.01" max="0.97" step="0.01" value="0.25"></div>
+          <div><label style="font-size:.8rem">D: <span id="pd-val">0.25</span></label><input type="range" id="pd" min="0.01" max="0.97" step="0.01" value="0.25"></div>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="label">Shannon Entropy H(X)</div>
+      <div class="value" id="entropy-val">—</div>
+      <div class="formula">H(X) = −Σ p<sub>i</sub> log₂ p<sub>i</sub>, in bits. Maximum: 2 bits (uniform over 4 outcomes).</div>
+      <div class="note" id="entropy-sum">Sum of sliders: 1.00</div>
+    </div>
+    <svg class="chart" id="entropy-chart" viewBox="0 0 600 240"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q5">
+  <div class="q" onclick="toggle(this)"><span>5. Why is the oracle ambiguous?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>An oracle that speaks clearly exposes itself to the risk of being wrong. An oracle that speaks ambiguously can hedge. The monograph derives the optimal level of ambivalence in closed form: a* = ((α<sub>t</sub> + γ<sub>t</sub>)·σ<sub>ω</sub> / (2β<sub>t</sub>))². The slider below sets (α + γ) jointly — the combined weight on reputation and authority.</p>
+    <div class="controls">
+      <div class="control"><label>Reputation + authority (α + γ) <span class="value" id="alpha-val">0.50</span></label><input type="range" id="alpha" min="0.01" max="1" step="0.01" value="0.50"></div>
+      <div class="control"><label>Weight on informativeness β <span class="value" id="beta-val">0.30</span></label><input type="range" id="beta" min="0.05" max="1" step="0.01" value="0.30"></div>
+      <div class="control" style="grid-column:1/-1"><label>Oracle's uncertainty σ<sub>ω</sub> <span class="value" id="sigma-val">0.50</span></label><input type="range" id="sigma" min="0.01" max="1" step="0.01" value="0.50"></div>
+    </div>
+    <div class="result">
+      <div class="label">Optimal Ambivalence a*</div>
+      <div class="value" id="ambiv-val">—</div>
+      <div class="formula">a* = ((α + γ) · σ<sub>ω</sub> / (2β))²</div>
+    </div>
+    <svg class="chart" id="ambiv-chart" viewBox="0 0 600 240"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q6">
+  <div class="q" onclick="toggle(this)"><span>6. What is the trade-off between deception and repetition?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The Greeks minimized repetition risk but accepted deception risk. The Chinese minimized deception risk but accepted repetition risk. The minimax theorem says no mixing weight can drive both risks below <em>dr</em>/(<em>d</em>+<em>r</em>).</p>
+    <div class="controls">
+      <div class="control"><label>Deception risk d <span class="value" id="d-val">0.80</span></label><input type="range" id="drisk" min="0.05" max="1" step="0.01" value="0.80"></div>
+      <div class="control"><label>Repetition risk r <span class="value" id="r-val">0.40</span></label><input type="range" id="rrisk" min="0.05" max="1" step="0.01" value="0.40"></div>
+    </div>
+    <div class="result">
+      <div class="label">Minimax residual risk</div>
+      <div class="value" id="minimax-val">—</div>
+      <div class="formula">min<sub>α</sub> max{D, R} = dr/(d+r), attained at α* = d/(d+r)</div>
+    </div>
+    <svg class="chart" id="tradeoff-chart" viewBox="0 0 600 260"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q7">
+  <div class="q" onclick="toggle(this)"><span>7. What does quantum decision theory add?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>Classical probability says the probability of A or B is P(A) + P(B). Quantum probability adds an interference term: 2√(P(A)P(B))·cos θ. For the formula to represent a valid probability, we must have P(A) + P(B) ≤ 1 — the two sliders are linked.</p>
+    <div class="controls">
+      <div class="control"><label>P(A) <span class="value" id="pA-val">0.40</span></label><input type="range" id="pA" min="0.05" max="0.95" step="0.01" value="0.40"></div>
+      <div class="control"><label>P(B) <span class="value" id="pB-val">0.40</span></label><input type="range" id="pB" min="0.05" max="0.95" step="0.01" value="0.40"></div>
+      <div class="control" style="grid-column:1/-1"><label>Phase angle θ <span class="value" id="theta-val">1.57</span> rad</label><input type="range" id="theta" min="0" max="6.283" step="0.01" value="1.57"></div>
+    </div>
+    <div class="result">
+      <div class="label">P(A ∪ B) — classical vs. quantum</div>
+      <div class="value" id="quantum-val">—</div>
+      <div class="formula">P(A ∪ B) = P(A) + P(B) + 2√(P(A)P(B)) cos θ, with P(A) + P(B) ≤ 1</div>
+      <div class="note" id="quantum-note"></div>
+    </div>
+    <svg class="chart" id="quantum-chart" viewBox="0 0 600 240"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q8">
+  <div class="q" onclick="toggle(this)"><span>8. How should we judge the forecaster?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The monograph identifies five competencies of the <em>phronimos</em> forecaster: question formulation, method selection, hermeneutic vigilance, wise action, and reflective learning. Their equal-weighted average is the phronesis score Φ. Since L ranges from −1 to +1, Φ ranges from −0.2 to 1.0.</p>
+    <div class="controls">
+      <div class="control"><label>Question formulation Q <span class="value" id="q-q-val">0.50</span></label><input type="range" id="Qval" min="0" max="1" step="0.01" value="0.50"></div>
+      <div class="control"><label>Method selection M <span class="value" id="q-m-val">0.50</span></label><input type="range" id="Mval" min="0" max="1" step="0.01" value="0.50"></div>
+      <div class="control"><label>Hermeneutic vigilance H <span class="value" id="q-h-val">0.50</span></label><input type="range" id="Hval" min="0" max="1" step="0.01" value="0.50"></div>
+      <div class="control"><label>Wise action A <span class="value" id="q-a-val">0.50</span></label><input type="range" id="Aval" min="0" max="1" step="0.01" value="0.50"></div>
+      <div class="control" style="grid-column:1/-1"><label>Reflective learning L (from −1 to 1) <span class="value" id="q-l-val">0.00</span></label><input type="range" id="Lval" min="-1" max="1" step="0.01" value="0.00"></div>
+    </div>
+    <div class="result">
+      <div class="label">Phronesis Score Φ</div>
+      <div class="value" id="phronesis-val">—</div>
+      <div class="formula">Φ = (Q + M + H + A + L) / 5, ranging from −0.2 to 1.0</div>
+    </div>
+    <svg class="chart" id="phronesis-chart" viewBox="0 0 600 240"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q9">
+  <div class="q" onclick="toggle(this)"><span>9. What kinds of claims are made about AI risk?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The paper distinguishes four tiers of claim. Each requires a different form of evidential support.</p>
+    <div class="tier-card tier-1"><h4>Tier 1 — Possibility</h4><p>A failure mechanism can be coherently described. This is the weakest form of claim.</p><p class="example">"A sufficiently capable system could, in principle, evade human oversight."</p><p><strong>What it requires:</strong> a coherent mechanism, nothing more.</p></div>
+    <div class="tier-card tier-2"><h4>Tier 2 — Mechanism</h4><p>Experiments or observations demonstrate that some components of the mechanism occur under specified conditions.</p><p class="example">"In controlled evaluations, model X has been observed to circumvent safety filters when given tool access."</p><p><strong>What it requires:</strong> reproducible incidents, clear system boundaries, independent replication.</p></div>
+    <div class="tier-card tier-3"><h4>Tier 3 — Forecast</h4><p>A model or reasoned judgment estimates the probability and timing of a defined event.</p><p class="example">"There is a 15% probability of a control failure by 2035, based on model M and assumptions A₁…Aₙ."</p><p><strong>What it requires:</strong> defined event, explicit assumptions, calibrated probabilities, evaluation record.</p></div>
+    <div class="tier-card tier-4"><h4>Tier 4 — Policy Prescription</h4><p>A decision-maker argues that a particular intervention is justified given the forecast, consequences, rights, and alternatives.</p><p class="example">"Development of systems above capability threshold T should be suspended."</p><p><strong>What it requires:</strong> risk analysis, alternatives, proportionality, authority, accountability.</p></div>
+  </div>
+</section>
+
+<section class="qa" id="q10">
+  <div class="q" onclick="toggle(this)"><span>10. How do we classify a public warning?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The paper distinguishes six kinds of speech act that a public warning about AI can be. Selecting the wrong category is one of the most common confusions in the debate.</p>
+    <div class="controls">
+      <div class="control" style="grid-column:1/-1">
+        <label>Speech act</label>
+        <select id="speech-act">
+          <option value="scenario">Scenario — a conditional exploration of what could happen</option>
+          <option value="conjecture">Conjecture — an abductive hypothesis inviting test</option>
+          <option value="forecast">Forecast — a probability assignment over a defined event</option>
+          <option value="strategic">Strategic announcement — an intervention intended to shape behavior</option>
+          <option value="policy">Policy prescription — a normative recommendation for action</option>
+          <option value="mixed">Mixed — several at once, which is the most common case</option>
+        </select>
+      </div>
+    </div>
+    <div class="result">
+      <div class="label">What this speech act carries</div>
+      <div id="speech-content" style="padding:.8rem 0"></div>
+    </div>
+  </div>
+</section>
+
+<section class="qa" id="q11">
+  <div class="q" onclick="toggle(this)"><span>11. What is a POMDP?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The monograph formalizes the divinatory process as a <em>Partially Observable Markov Decision Process</em> — a decision-theoretic structure in which the forecaster cannot directly observe the state of the world, but must infer it from signs. Click any component below to see what it does.</p>
+    <div class="tuple-grid" id="pomdp-tuple"></div>
+    <div class="tuple-detail" id="pomdp-detail"><p style="color:var(--slate);font-style:italic">Select a component above to see what it represents.</p></div>
+    <h4 style="color:var(--deep-blue);margin-top:2rem">The Belief Update — Interactive</h4>
+    <p>The forecaster begins with a prior belief over the two possible hidden states, transitions through the world (the transition function), and then observes a sign. The posterior is what the forecaster should believe after the sign. Move the three sliders to see the full cycle.</p>
+    <div class="controls">
+      <div class="control"><label>Prior P(s₀) <span class="value" id="pomdp-prior-val">0.50</span></label><input type="range" id="pomdp-prior" min="0.01" max="0.99" step="0.01" value="0.50"></div>
+      <div class="control"><label>Stickiness α (transition) <span class="value" id="pomdp-stick-val">0.50</span></label><input type="range" id="pomdp-stick" min="0.01" max="0.99" step="0.01" value="0.50"></div>
+      <div class="control" style="grid-column:1/-1"><label>Reliability ρ (observation) <span class="value" id="pomdp-rel-val">0.80</span></label><input type="range" id="pomdp-rel" min="0.01" max="0.99" step="0.01" value="0.80"></div>
+    </div>
+    <div class="result">
+      <div class="label">Posterior b′(s₀ | o₀)</div>
+      <div class="value" id="pomdp-posterior">—</div>
+      <div class="formula">b′(s′) = O(o|s′) · Σ<sub>s</sub> T(s′|s) · b(s) / P(o)</div>
+      <div class="note" id="pomdp-note"></div>
+    </div>
+    <svg class="chart" id="pomdp-chart" viewBox="0 0 600 260"></svg>
+  </div>
+</section>
+
+<section class="qa" id="q12">
+  <div class="q" onclick="toggle(this)"><span>12. What is the Quantum Divinatory POMDP?</span><span class="toggle">▾</span></div>
+  <div class="a">
+    <p>The monograph's most ambitious formal step is the <em>Quantum Divinatory POMDP</em> — a generalization of the classical POMDP in which the forecaster's belief is not a probability distribution over classical states, but a distribution over density operators on a Hilbert space. The point is not that divination is a quantum-mechanical process in the physics sense. The point is that quantum probability provides a more general framework for reasoning under uncertainty.</p>
+    <div class="tuple-grid" id="qdpomdp-tuple"></div>
+    <div class="tuple-detail" id="qdpomdp-detail"><p style="color:var(--slate);font-style:italic">Select a component above to see what it represents.</p></div>
+    <h4 style="color:var(--deep-blue);margin-top:2rem">Classical and Quantum — The Correspondence</h4>
+    <table class="corr-table">
+      <thead><tr><th>Concept</th><th>Classical POMDP</th><th>Quantum (QDPOMDP)</th></tr></thead>
+      <tbody>
+        <tr><td>State</td><td>Probability distribution b(s) over S</td><td>Density operator ρ on H</td></tr>
+        <tr><td>Transition</td><td>Stochastic matrix T(s′|s,a)</td><td>CPTP map T(ρ)</td></tr>
+        <tr><td>Observation</td><td>Stochastic matrix O(o|s′,a)</td><td>POVM {M<sub>o</sub>}, Σ<sub>o</sub> M<sub>o</sub> = I</td></tr>
+        <tr><td>Measurement probability</td><td>P(o|s′) = O(o|s′,a)</td><td>P(o|ρ) = Tr(M<sub>o</sub> ρ)</td></tr>
+        <tr><td>Posterior update</td><td>Bayes' rule</td><td>ρ<sub>o</sub> = M<sub>o</sub><sup>1/2</sup> ρ M<sub>o</sub><sup>1/2</sup> / Tr(M<sub>o</sub> ρ)</td></tr>
+        <tr><td>Completeness</td><td>Σ<sub>o</sub> O(o|s′) = 1</td><td>Σ<sub>o</sub> M<sub>o</sub> = I</td></tr>
+        <tr><td>Recovery of classical</td><td>—</td><td>When ρ diagonal, T preserves diagonality, M<sub>o</sub> diagonal projectors</td></tr>
+      </tbody>
+    </table>
+    <h4 style="color:var(--deep-blue);margin-top:2rem">A Qubit Example — Interactive Measurement</h4>
+    <p>The simplest quantum measurement is a single qubit. The state is |ψ(θ)⟩ = cos(θ/2)|0⟩ + sin(θ/2)|1⟩, and we measure it in the basis {|φ⟩, |φ⊥⟩} where |φ⟩ = cos(φ/2)|0⟩ + sin(φ/2)|1⟩. The probabilities follow the Born rule: P(|φ⟩) = cos²((θ−φ)/2) and P(|φ⊥⟩) = sin²((θ−φ)/2). Move the sliders to see the measurement collapse.</p>
+    <div class="controls">
+      <div class="control"><label>State angle θ <span class="value" id="q-θ-val">1.57</span> rad</label><input type="range" id="q-theta" min="0" max="3.14159" step="0.01" value="1.57"></div>
+      <div class="control"><label>Measurement basis angle φ <span class="value" id="q-φ-val">0.00</span> rad</label><input type="range" id="q-phi" min="0" max="3.14159" step="0.01" value="0.00"></div>
+    </div>
+    <div class="result">
+      <div class="label">Born Rule Probabilities</div>
+      <div class="value" id="q-probs">—</div>
+      <div class="formula">P(|φ⟩) = cos²((θ−φ)/2) &nbsp;·&nbsp; P(|φ⊥⟩) = sin²((θ−φ)/2)</div>
+      <div class="note" id="q-note"></div>
+    </div>
+    <svg class="chart" id="q-bars" viewBox="0 0 600 200"></svg>
+    <svg class="chart" id="q-circle" viewBox="0 0 240 240" style="max-width:300px;margin:.5rem auto"></svg>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Understanding The Oracle</strong> — a companion to <em>Τέχνη Προγνώσεως / Ars Prognostica</em> (2026) and <em>Intelligence Without Wisdom</em> (2026).</p>
+  <p>Cybernetics and Artificial Intelligence Laboratory · National and Kapodistrian University of Athens</p>
+  <p style="margin-top:1rem;opacity:.7">All computation happens in your browser. The file is entirely self-contained. No data is collected.</p>
+</footer>
+
+<script>
+"use strict";
+function toggle(el){el.classList.toggle("collapsed");var a=el.nextElementSibling;if(a)a.classList.toggle("collapsed")}
+function svgEl(tag,attrs){var el=document.createElementNS("http://www.w3.org/2000/svg",tag);for(var k in attrs)el.setAttribute(k,attrs[k]);return el}
+function drawAxes(svg,W,H,padL,padR,padT,padB){var baseline=padT+(H-padT-padB);svg.appendChild(svgEl("line",{x1:padL,y1:baseline,x2:W-padR,y2:baseline,stroke:"#2A2A2A","stroke-width":1.5}));svg.appendChild(svgEl("line",{x1:padL,y1:padT,x2:padL,y2:baseline,stroke:"#2A2A2A","stroke-width":1.5}))}
+
+var TERMS=[
+  {greek:"μαντεία",translit:"manteia",meaning:"Inspired reception of divine knowledge",axis:"theocentric",source:"Divine revelation, mediated by the Pythia's frenzy",form:"Supra-rational cognition (Plato's divine madness)",criterion:"Oracular authority and retrospective fit",failure:"Deception (παρερμηνεία) — the god may lie or obscure"},
+  {greek:"χρησμοδοσία",translit:"chresmodosia",meaning:"Institutional delivery of the oracle",axis:"theocentric",source:"The institutional framework of the sanctuary",form:"Ritual and bureaucratic procedure",criterion:"Institutional integrity and ritual propriety",failure:"Capture, corruption, or administrative drift"},
+  {greek:"προφητεία",translit:"propheteia",meaning:"Hermeneutic interpretation of divine will",axis:"theocentric",source:"The interpreter's reading of the oracle's utterance",form:"Hermeneutic inference from symbol to meaning",criterion:"Coherence with tradition and with the consultant's situation",failure:"Παρερμηνεία — misinterpretation, especially self-serving"},
+  {greek:"πρόβλεψις",translit:"problepsis",meaning:"Perception of signs",axis:"empirical",source:"The trained eye scanning the horizon",form:"Perceptual detection, not inference",criterion:"Whether the sign is genuine or noise",failure:"Missing the sign, or seeing one that is not there"},
+  {greek:"πρόγνωσις",translit:"prognōsis",meaning:"Inference from signs to future states",axis:"empirical",source:"Observation of signs (σημεῖα)",form:"Induction, statistical inference",criterion:"Predictive accuracy and calibration",failure:"The unprecedented — a regime change that invalidates the pattern"},
+  {greek:"πρόνοια",translit:"pronoia",meaning:"Structural preparation for the future",axis:"empirical",source:"Structural analysis of invariants",form:"Deliberation about feasible outcomes under constraints",criterion:"Whether preparation meets the situation",failure:"Mistaking fantasy for structure (ἐλπίς vs. πρόνοια)"},
+  {greek:"εἰκασία",translit:"eikasia",meaning:"Conjecture, likeness-making",axis:"speculative",source:"Creative imagination",form:"Abduction — inference to the best explanation",criterion:"Practical success of the action it licenses",failure:"Overconfidence — conjecture treated as fact"},
+  {greek:"προαναγγελία",translit:"proanangelia",meaning:"Public pre-announcement of conjecture",axis:"speculative",source:"The forecaster's judgment made public",form:"Communicative speech act (performative)",criterion:"Whether it coordinates action appropriately",failure:"Premature commitment, or performative self-fulfillment"},
+  {greek:"προεξόφλησις",translit:"proexoflēsis",meaning:"Premature closure — treating a conjecture as settled fact",axis:"pathology",source:"Premature commitment to a hypothesis",form:"None — it forecloses inference rather than performing it",criterion:"None — the question of truth has been treated as settled",failure:"It IS the failure: the collapse of the abductive mode into apparent certainty"},
+  {greek:"φρόνησις",translit:"phronēsis",meaning:"Practical wisdom — the master virtue",axis:"meta",source:"Experience of human affairs, disciplined by reason",form:"Deliberation about particulars and ends",criterion:"Whether the action is good and well-judged",failure:"Ἀκρασία (weakness of will), or the atrophy of judgment"}
+];
+var termGrid=document.getElementById("term-grid");
+var termDetail=document.getElementById("term-detail");
+TERMS.forEach(function(t,i){var card=document.createElement("div");card.className="term-card";card.innerHTML='<div class="greek">'+t.greek+'</div><div class="translit">'+t.translit+'</div><div class="meaning">'+t.meaning+'</div>';card.addEventListener("click",function(){showTerm(i,card)});termGrid.appendChild(card)});
+function showTerm(i,card){document.querySelectorAll(".term-card").forEach(function(c){c.classList.remove("selected")});card.classList.add("selected");var t=TERMS[i];termDetail.innerHTML='<h4>'+t.greek+' <em style="color:var(--slate);font-size:.9em">('+t.translit+')</em> <span class="axis-tag axis-'+t.axis+'">'+t.axis+'</span></h4><p style="margin:.5rem 0"><strong>Meaning:</strong> '+t.meaning+'</p><p style="margin:.3rem 0"><strong>Source:</strong> '+t.source+'</p><p style="margin:.3rem 0"><strong>Inferential form:</strong> '+t.form+'</p><p style="margin:.3rem 0"><strong>Criterion:</strong> '+t.criterion+'</p><p style="margin:.3rem 0"><strong>Failure mode:</strong> '+t.failure+'</p>'}
+
+var MODES={
+  theocentric:{title:"Theocentric Mode",color:"#8C1E28",source:"Divine revelation — the god has knowledge of the future and chooses to reveal or withhold it",form:"Supra-rational cognition; the human interpreter reads the oracle's response through ritual and tradition",criterion:"Oracular authority and retrospective fit",failure:"Deception — the god may lie, obscure, or withhold",example:"The Pythia at Delphi; the consultation of Croesus; the wooden walls oracle"},
+  empirical:{title:"Empirical Mode",color:"#2D5AA0",source:"Observation of signs — the physician reads symptoms, the statesman reads the strategic situation",form:"Induction — from observed particulars to general rules; Bayesian updating",criterion:"Predictive accuracy and calibration",failure:"The unprecedented — a regime change that invalidates the pattern",example:"Hippocratic prognosis; Pericles' structural forecast of Athenian survival"},
+  speculative:{title:"Speculative Mode",color:"#1E643C",source:"Creative imagination — the generation of hypotheses from partial information",form:"Abduction — inference to the best explanation",criterion:"Practical success of the action it licenses",failure:"Overconfidence — the conjecture is treated as certainty",example:"Themistocles' interpretation of the wooden walls; the general in an unprecedented situation"}
+};
+function showMode(key,btn){document.querySelectorAll(".mode-tab").forEach(function(b){b.classList.remove("active")});if(btn)btn.classList.add("active");var m=MODES[key];document.getElementById("mode-content").innerHTML='<div class="tier-card" style="border-color:'+m.color+'"><h4 style="color:'+m.color+'">'+m.title+'</h4><p><strong>Source of knowledge:</strong> '+m.source+'</p><p><strong>Inferential form:</strong> '+m.form+'</p><p><strong>Criterion of evaluation:</strong> '+m.criterion+'</p><p><strong>Characteristic failure mode:</strong> '+m.failure+'</p><p class="example"><strong>Paradigm case:</strong> '+m.example+'</p></div>'}
+
+function drawBarChart(svg,values,labels,colors,opts){opts=opts||{};svg.innerHTML="";var W=600,H=240;var padL=55,padR=20,padT=30,padB=45;var chartW=W-padL-padR;var chartH=H-padT-padB;var maxV=opts.maxV||Math.max.apply(null,values.map(Math.abs).concat([1]));var baseline=padT+chartH;var n=values.length;for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(maxV*i/4).toFixed(2);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var slot=chartW/n;var barW=slot*0.6;var gap=slot*0.4;values.forEach(function(v,i){var x=padL+i*slot+gap/2;var displayV=Math.max(0,v);var h=Math.max(0,(displayV/maxV)*chartH);var y=baseline-h;svg.appendChild(svgEl("rect",{x:x,y:y,width:barW,height:h,fill:colors[i]||"#2D5AA0",rx:4}));var lbl=svgEl("text",{x:x+barW/2,y:baseline+20,"text-anchor":"middle","font-size":12,fill:"#2A2A2A","font-weight":500});lbl.textContent=labels[i];svg.appendChild(lbl);var valLbl=svgEl("text",{x:x+barW/2,y:y-6,"text-anchor":"middle","font-size":11,fill:"#2A2A2A","font-weight":600});valLbl.textContent=v.toFixed(3);svg.appendChild(valLbl)})}
+
+function updateBayes(){var prior=+document.getElementById("prior").value;var lik=+document.getElementById("lik").value;var fp=+document.getElementById("fp").value;var denom=lik*prior+fp*(1-prior);var posterior=denom>0?(lik*prior)/denom:0;document.getElementById("prior-val").textContent=prior.toFixed(2);document.getElementById("lik-val").textContent=lik.toFixed(2);document.getElementById("fp-val").textContent=fp.toFixed(2);document.getElementById("posterior").textContent=posterior.toFixed(4);drawBarChart(document.getElementById("bayes-chart"),[prior,lik,fp,posterior],["Prior","Likelihood","False+","Posterior"],["#7A8AA8","#2D5AA0","#B8860B","#1E643C"],{maxV:1})}
+["prior","lik","fp"].forEach(function(id){document.getElementById(id).addEventListener("input",updateBayes)});
+
+var ENT_IDS=["pa","pb","pc","pd"];var ENT_COLORS=["#2D5AA0","#8C1E28","#1E643C","#B8860B"];var ENT_FLOOR=0.01;var ENT_CEIL=0.97;var entValues=[0.25,0.25,0.25,0.25];
+function entRender(){ENT_IDS.forEach(function(id,i){document.getElementById(id).value=entValues[i];document.getElementById(id+"-val").textContent=entValues[i].toFixed(2)});var H=-entValues.reduce(function(a,p){return a+(p>0?p*Math.log2(p):0)},0);document.getElementById("entropy-val").textContent=H.toFixed(3)+" bits";var sum=entValues.reduce(function(a,b){return a+b},0);document.getElementById("entropy-sum").textContent="Sum of sliders: "+sum.toFixed(2)+(Math.abs(sum-1)<0.005?" ✓":" (should be 1.00)");drawBarChart(document.getElementById("entropy-chart"),entValues,["A","B","C","D"],ENT_COLORS,{maxV:1})}
+function entMove(changedId){var idx=ENT_IDS.indexOf(changedId);var v=+document.getElementById(changedId).value;v=Math.max(ENT_FLOOR,Math.min(ENT_CEIL,v));var newVals=entValues.slice();newVals[idx]=v;var remaining=1-v;var oldOthers=entValues.reduce(function(s,x,i){return i!==idx?s+x:s},0);for(var i=0;i<4;i++){if(i!==idx){if(oldOthers>0){newVals[i]=entValues[i]*(remaining/oldOthers)}else{newVals[i]=remaining/3}}}for(var i=0;i<4;i++){if(i!==idx)newVals[i]=Math.max(ENT_FLOOR,newVals[i])}var sum=newVals.reduce(function(a,b){return a+b},0);if(Math.abs(sum-1)>0.0001){newVals[idx]=Math.max(ENT_FLOOR,Math.min(ENT_CEIL,newVals[idx]+(1-sum)))}sum=newVals.reduce(function(a,b){return a+b},0);if(Math.abs(sum-1)>0.0001){var residual=1-sum;for(var i=0;i<4;i++){newVals[i]=Math.max(ENT_FLOOR,Math.min(ENT_CEIL,newVals[i]+residual/4))}}entValues=newVals;entRender()}
+ENT_IDS.forEach(function(id){document.getElementById(id).addEventListener("input",function(){entMove(id)})});
+
+function updateAmbiv(){var alpha=+document.getElementById("alpha").value;var beta=+document.getElementById("beta").value;var sigma=+document.getElementById("sigma").value;document.getElementById("alpha-val").textContent=alpha.toFixed(2);document.getElementById("beta-val").textContent=beta.toFixed(2);document.getElementById("sigma-val").textContent=sigma.toFixed(2);var aStar=Math.pow((alpha*sigma)/(2*beta),2);document.getElementById("ambiv-val").textContent=aStar.toFixed(4);var svg=document.getElementById("ambiv-chart");svg.innerHTML="";var W=600,H=240,padL=55,padR=20,padT=20,padB=45;var chartW=W-padL-padR;var chartH=H-padT-padB;var baseline=padT+chartH;var xMin=0.05,xMax=1;var yMax=Math.max(4,aStar*1.2,0.5);for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(yMax*i/4).toFixed(1);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var pts=[];for(var n=0;n<=100;n++){var b=xMin+(n/100)*(xMax-xMin);var a=Math.pow((alpha*sigma)/(2*b),2);var x=padL+(b-xMin)/(xMax-xMin)*chartW;var yy=baseline-Math.min(a,yMax)/yMax*chartH;pts.push([x,yy])}var d=pts.map(function(p,idx){return(idx===0?"M":"L")+p[0]+" "+p[1]}).join(" ");svg.appendChild(svgEl("path",{d:d,fill:"none",stroke:"#2D5AA0","stroke-width":2.5}));var curX=padL+(beta-xMin)/(xMax-xMin)*chartW;var curY=baseline-Math.min(aStar,yMax)/yMax*chartH;svg.appendChild(svgEl("circle",{cx:curX,cy:curY,r:6,fill:"#B8860B",stroke:"white","stroke-width":2}));var xLbl=svgEl("text",{x:W/2,y:H-8,"text-anchor":"middle","font-size":12,fill:"#4A5568"});xLbl.textContent="Informativeness weight β";svg.appendChild(xLbl);var yLbl=svgEl("text",{x:15,y:H/2,"text-anchor":"middle","font-size":12,fill:"#4A5568",transform:"rotate(-90 15 "+(H/2)+")"});yLbl.textContent="Optimal ambivalence a*";svg.appendChild(yLbl)}
+["alpha","beta","sigma"].forEach(function(id){document.getElementById(id).addEventListener("input",updateAmbiv)});
+
+function updateTradeoff(){var d=+document.getElementById("drisk").value;var r=+document.getElementById("rrisk").value;document.getElementById("d-val").textContent=d.toFixed(2);document.getElementById("r-val").textContent=r.toFixed(2);var minimax=(d*r)/(d+r);var alphaStar=d/(d+r);document.getElementById("minimax-val").textContent=minimax.toFixed(4)+"  (α* = "+alphaStar.toFixed(3)+")";var svg=document.getElementById("tradeoff-chart");svg.innerHTML="";var W=600,H=260,padL=55,padR=20,padT=20,padB=45;var chartW=W-padL-padR;var chartH=H-padT-padB;var baseline=padT+chartH;var maxV=Math.max(d,r);for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(maxV*i/4).toFixed(2);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var X=function(a){return padL+a*chartW};var Y=function(v){return baseline-(v/maxV)*chartH};svg.appendChild(svgEl("line",{x1:X(0),y1:Y(d),x2:X(1),y2:Y(0),stroke:"#8C1E28","stroke-width":2.5}));svg.appendChild(svgEl("line",{x1:X(0),y1:Y(0),x2:X(1),y2:Y(r),stroke:"#2D5AA0","stroke-width":2.5}));svg.appendChild(svgEl("circle",{cx:X(alphaStar),cy:Y(minimax),r:6,fill:"#B8860B",stroke:"white","stroke-width":2}));var labD=svgEl("text",{x:X(0)+10,y:Y(d)-8,"font-size":12,fill:"#8C1E28","font-weight":600});labD.textContent="D(α) = (1−α)d";svg.appendChild(labD);var labR=svgEl("text",{x:X(1)-90,y:Y(r)+18,"font-size":12,fill:"#2D5AA0","font-weight":600});labR.textContent="R(α) = αr";svg.appendChild(labR);var xLbl=svgEl("text",{x:W/2,y:H-8,"text-anchor":"middle","font-size":12,fill:"#4A5568"});xLbl.textContent="Calculator weight α (0 = Greek, 1 = Chinese)";svg.appendChild(xLbl)}
+["drisk","rrisk"].forEach(function(id){document.getElementById(id).addEventListener("input",updateTradeoff)});
+
+function onQuantumMove(which){var pA=+document.getElementById("pA").value;var pB=+document.getElementById("pB").value;if(which==="A"&&pA+pB>1){pB=Math.max(0.05,1-pA);document.getElementById("pB").value=pB}else if(which==="B"&&pA+pB>1){pA=Math.max(0.05,1-pB);document.getElementById("pA").value=pA}updateQuantum()}
+function updateQuantum(){var pA=+document.getElementById("pA").value;var pB=+document.getElementById("pB").value;var theta=+document.getElementById("theta").value;document.getElementById("pA-val").textContent=pA.toFixed(2);document.getElementById("pB-val").textContent=pB.toFixed(2);document.getElementById("theta-val").textContent=theta.toFixed(2);var classical=pA+pB;var interference=2*Math.sqrt(pA*pB)*Math.cos(theta);var quantum=classical+interference;document.getElementById("quantum-val").textContent=quantum.toFixed(3)+" (classical: "+classical.toFixed(3)+")";var note="";if(quantum>1+0.001){note="Note: the ideal interference formula exceeds 1. In QDT practice, the attraction factor is bounded by the quarter law (|q| ≤ 0.25)."}else if(quantum<-0.001){note="Note: the ideal interference formula falls below 0. In QDT practice, the attraction factor is bounded by the quarter law (|q| ≤ 0.25)."}else{note="P(A) + P(B) = "+classical.toFixed(2)+" ≤ 1. Result lies in the valid probability range."}document.getElementById("quantum-note").textContent=note;var svg=document.getElementById("quantum-chart");svg.innerHTML="";var W=600,H=240,padL=55,padR=20,padT=20,padB=45;var chartW=W-padL-padR;var chartH=H-padT-padB;var baseline=padT+chartH;var xMin=0,xMax=2*Math.PI;var yMin=0;var yMax=Math.max(classical+2*Math.sqrt(pA*pB),1);for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(yMax*i/4).toFixed(2);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var X=function(v){return padL+(v-xMin)/(xMax-xMin)*chartW};var Y=function(v){return baseline-(v-yMin)/(yMax-yMin)*chartH};svg.appendChild(svgEl("line",{x1:X(xMin),y1:Y(classical),x2:X(xMax),y2:Y(classical),stroke:"#2D5AA0","stroke-width":2,"stroke-dasharray":"6 4"}));var pts=[];for(var n=0;n<=200;n++){var t=xMin+(n/200)*(xMax-xMin);var p=pA+pB+2*Math.sqrt(pA*pB)*Math.cos(t);pts.push([X(t),Y(p)])}var d=pts.map(function(p,idx){return(idx===0?"M":"L")+p[0]+" "+p[1]}).join(" ");svg.appendChild(svgEl("path",{d:d,fill:"none",stroke:"#8C1E28","stroke-width":2.5}));svg.appendChild(svgEl("circle",{cx:X(theta),cy:Y(quantum),r:6,fill:"#B8860B",stroke:"white","stroke-width":2}));var labClass=svgEl("text",{x:X(xMax)-10,y:Y(classical)-6,"text-anchor":"end","font-size":11,fill:"#2D5AA0"});labClass.textContent="Classical";svg.appendChild(labClass);var labQ=svgEl("text",{x:X(0)+10,y:Y(quantum)-10,"font-size":11,fill:"#8C1E28","font-weight":600});labQ.textContent="Quantum";svg.appendChild(labQ);var xLbl=svgEl("text",{x:W/2,y:H-8,"text-anchor":"middle","font-size":12,fill:"#4A5568"});xLbl.textContent="Phase angle θ (radians)";svg.appendChild(xLbl)}
+document.getElementById("pA").addEventListener("input",function(){onQuantumMove("A")});
+document.getElementById("pB").addEventListener("input",function(){onQuantumMove("B")});
+document.getElementById("theta").addEventListener("input",updateQuantum);
+
+function updatePhronesis(){var Q=+document.getElementById("Qval").value;var M=+document.getElementById("Mval").value;var H=+document.getElementById("Hval").value;var A=+document.getElementById("Aval").value;var L=+document.getElementById("Lval").value;document.getElementById("q-q-val").textContent=Q.toFixed(2);document.getElementById("q-m-val").textContent=M.toFixed(2);document.getElementById("q-h-val").textContent=H.toFixed(2);document.getElementById("q-a-val").textContent=A.toFixed(2);document.getElementById("q-l-val").textContent=L.toFixed(2);var phi=(Q+M+H+A+L)/5;document.getElementById("phronesis-val").textContent=phi.toFixed(3);var Ldisp=(L+1)/2;drawBarChart(document.getElementById("phronesis-chart"),[Q,M,H,A,Ldisp],["Q","M","H","A","L*"],["#2D5AA0","#2D5AA0","#2D5AA0","#2D5AA0","#8C1E28"],{maxV:1})}
+["Qval","Mval","Hval","Aval","Lval"].forEach(function(id){document.getElementById(id).addEventListener("input",updatePhronesis)});
+
+var SPEECH_ACTS={
+  scenario:{title:"Scenario",desc:"A conditional exploration of what could happen under specified assumptions.",carries:"A conditional pathway — 'If X, then Y' — without claiming that X will occur. Its purpose is to illuminate a possibility, not to predict it.",burden:"Must state its assumptions and its purpose. Need not assign a probability. Not falsifiable in the strict sense.",failure:"Being mistaken for a forecast — treated as though it had claimed that X will probably occur."},
+  conjecture:{title:"Conjecture",desc:"An abductive hypothesis — a proposed explanation of what is observed, generated by creative inference.",carries:"A hypothesis that invites testing. Its warrant is plausibility, not probability.",burden:"Must be presented as a hypothesis, with the evidence that suggested it and the observations that would count against it.",failure:"Being treated as established fact (προεξόφληση), or being dismissed because it is not yet proven."},
+  forecast:{title:"Forecast",desc:"A probability assignment over a defined event within a defined horizon.",carries:"A claim about the probability of a defined outcome. Its warrant is calibration against a record.",burden:"Must define the event, the horizon, the reference class, the assumptions, the probability and its basis, and the conditions that would count against it.",failure:"Lacking any of these components while retaining the grammatical form of a forecast — the most common form of epistemic confusion in the AI-risk debate."},
+  strategic:{title:"Strategic Announcement",desc:"An intervention in the beliefs and behaviors of an audience, intended to shape the outcome it describes.",carries:"A performative speech act. It changes the world by being made — not merely describes it.",burden:"Must disclose that the announcement is intended to influence behavior, and the direction of that influence. Hiding the strategic dimension behind the grammar of a forecast is a form of manipulation.",failure:"Performative self-fulfillment — the announcement brings about the very outcome it claimed to warn against."},
+  policy:{title:"Policy Prescription",desc:"A normative recommendation for action, justified by a forecast, a theory of consequences, a theory of rights, and an account of alternatives.",carries:"A claim about what should be done, which requires normative premises that go beyond any forecast.",burden:"Must state the risk analysis, the alternatives considered, the proportionality of the intervention, the authority to act, and the accountability of those acting.",failure:"Being presented as a technocratic conclusion when it is in fact a political choice."},
+  mixed:{title:"Mixed",desc:"Several of the above at once — which is the most common case for public statements about AI risk.",carries:"A complex speech act in which the warrant of one type is borrowed for the persuasive weight of another.",burden:"Requires the speaker to be explicit about which dimension is doing which work, and what the reader should treat as evidence versus argument versus intervention.",failure:"Category confusion — the reader cannot tell whether they are being given a prediction, a hypothesis, an intervention, or a recommendation."}
+};
+function updateSpeech(){var key=document.getElementById("speech-act").value;var s=SPEECH_ACTS[key];document.getElementById("speech-content").innerHTML='<h4 style="color:var(--deep-blue);margin:0 0 .5rem">'+s.title+'</h4><p style="margin:.3rem 0"><strong>What it is:</strong> '+s.desc+'</p><p style="margin:.3rem 0"><strong>What it carries:</strong> '+s.carries+'</p><p style="margin:.3rem 0"><strong>What it requires:</strong> '+s.burden+'</p><p style="margin:.3rem 0"><strong>Characteristic failure:</strong> '+s.failure+'</p>'}
+document.getElementById("speech-act").addEventListener("change",updateSpeech);
+
+var POMDP_COMPONENTS=[
+  {symbol:"S",name:"Hidden state space",desc:"The set of possible states the world could be in. The forecaster wants to know which state obtains but cannot observe it directly. In the divinatory framework, S is the divine will or the true situation the god knows."},
+  {symbol:"A",name:"Action space",desc:"The set of actions the forecaster can take. Actions include questions to ask, methods to use, decisions to make, and whether to consult at all."},
+  {symbol:"T",name:"Transition function",desc:"T(s′|s, a): the probability of moving to state s′ from state s given action a. Encodes how the world evolves. For each s and a, the sum over s′ of T(s′|s, a) equals 1."},
+  {symbol:"R",name:"Reward function",desc:"R(s, a): the utility of taking action a in state s. Encodes the forecaster's objectives — what counts as a good outcome."},
+  {symbol:"Ω",name:"Observation space",desc:"The set of signs or signals the forecaster can perceive. In divination, Ω is the set of possible oracle utterances, symptoms, or portents."},
+  {symbol:"O",name:"Observation function",desc:"O(o|s′, a): the probability of observing o given the new state s′ and action a. Encodes the reliability of the sign. For each s′ and a, the sum over o of O(o|s′, a) equals 1."},
+  {symbol:"γ",name:"Discount factor",desc:"γ ∈ [0, 1): how much the forecaster values future rewards relative to present ones. γ = 0 is myopic; γ → 1 is far-sighted."}
+];
+var pomdpGrid=document.getElementById("pomdp-tuple");
+var pomdpDetail=document.getElementById("pomdp-detail");
+POMDP_COMPONENTS.forEach(function(c,i){var card=document.createElement("div");card.className="tuple-card";card.innerHTML='<div class="symbol">'+c.symbol+'</div><div class="name">'+c.name+'</div>';card.addEventListener("click",function(){document.querySelectorAll("#pomdp-tuple .tuple-card").forEach(function(x){x.classList.remove("selected")});card.classList.add("selected");pomdpDetail.innerHTML='<h4>'+c.symbol+' — '+c.name+'</h4><p>'+c.desc+'</p>'});pomdpGrid.appendChild(card)});
+
+function updatePOMDP(){var p=+document.getElementById("pomdp-prior").value;var alpha=+document.getElementById("pomdp-stick").value;var rho=+document.getElementById("pomdp-rel").value;document.getElementById("pomdp-prior-val").textContent=p.toFixed(2);document.getElementById("pomdp-stick-val").textContent=alpha.toFixed(2);document.getElementById("pomdp-rel-val").textContent=rho.toFixed(2);var prior0=p;var prior1=1-p;var pred0=alpha*prior0+(1-alpha)*prior1;var pred1=1-pred0;var p_o0=rho*pred0+(1-rho)*pred1;var post0=p_o0>0?(rho*pred0)/p_o0:0;var post1=1-post0;document.getElementById("pomdp-posterior").textContent=post0.toFixed(4);var note="Prior sum: "+(prior0+prior1).toFixed(2)+" · Predicted sum: "+(pred0+pred1).toFixed(2)+" · Posterior sum: "+(post0+post1).toFixed(2);if(Math.abs(alpha-0.5)<0.01)note+=" · α=0.5: uniform predicted regardless of prior";if(Math.abs(rho-0.5)<0.01)note+=" · ρ=0.5: posterior equals predicted";if(rho>0.99)note+=" · ρ≈1: posterior concentrates on observed state";document.getElementById("pomdp-note").textContent=note;var svg=document.getElementById("pomdp-chart");svg.innerHTML="";var W=600,H=260,padL=55,padR=20,padT=30,padB=55;var chartW=W-padL-padR;var chartH=H-padT-padB;var baseline=padT+chartH;for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(i/4).toFixed(2);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var groups=[{label:"Prior",v0:prior0,v1:prior1},{label:"Predicted",v0:pred0,v1:pred1},{label:"Posterior | o₀",v0:post0,v1:post1}];var groupW=chartW/groups.length;var barW=groupW*0.3;var barGap=groupW*0.1;groups.forEach(function(g,gi){var baseX=padL+gi*groupW+groupW/2-barW-barGap/2;[g.v0,g.v1].forEach(function(v,si){var x=baseX+si*(barW+barGap);var h=Math.max(0,v*chartH);var y=baseline-h;var color=si===0?"#2D5AA0":"#B8860B";svg.appendChild(svgEl("rect",{x:x,y:y,width:barW,height:h,fill:color,rx:3}));var vl=svgEl("text",{x:x+barW/2,y:y-5,"text-anchor":"middle","font-size":10,fill:"#2A2A2A","font-weight":600});vl.textContent=v.toFixed(2);svg.appendChild(vl)});var gl=svgEl("text",{x:padL+gi*groupW+groupW/2,y:baseline+20,"text-anchor":"middle","font-size":12,fill:"#2A2A2A","font-weight":500});gl.textContent=g.label;svg.appendChild(gl)});var leg0=svgEl("rect",{x:padL,y:H-18,width:12,height:12,fill:"#2D5AA0"});svg.appendChild(leg0);var leg0t=svgEl("text",{x:padL+16,y:H-8,"font-size":11,fill:"#4A5568"});leg0t.textContent="s₀";svg.appendChild(leg0t);var leg1=svgEl("rect",{x:padL+50,y:H-18,width:12,height:12,fill:"#B8860B"});svg.appendChild(leg1);var leg1t=svgEl("text",{x:padL+66,y:H-8,"font-size":11,fill:"#4A5568"});leg1t.textContent="s₁";svg.appendChild(leg1t)}
+["pomdp-prior","pomdp-stick","pomdp-rel"].forEach(function(id){document.getElementById(id).addEventListener("input",updatePOMDP)});
+
+var QDPOMDP_COMPONENTS=[
+  {symbol:"H",name:"Hilbert space",desc:"The space of possible quantum states — the analogue of S in the classical POMDP, but continuous and complex. A quantum state is a density operator ρ on H, not a point in a finite set."},
+  {symbol:"S",name:"Hidden states",desc:"The classical hidden states underlying the quantum state. Same role as in the classical POMDP, but now the belief is a distribution over density operators on H."},
+  {symbol:"A",name:"Actions",desc:"Same as in the classical POMDP: queries, methods, decisions."},
+  {symbol:"T",name:"CPTP map",desc:"A completely positive trace-preserving map on the density operator — the quantum analogue of the classical transition function. It maps ρ to ρ′ while preserving positivity and trace."},
+  {symbol:"R",name:"Reward",desc:"Same as in the classical POMDP."},
+  {symbol:"Ω",name:"Observations",desc:"Same as in the classical POMDP: the possible measurement outcomes."},
+  {symbol:"{M<sub>o</sub>}",name:"POVM",desc:"A positive operator-valued measure: a set of positive semidefinite operators M<sub>o</sub> with Σ<sub>o</sub> M<sub>o</sub> = I. Each outcome corresponds to a measurement operator. The probability of outcome o is P(o|ρ) = Tr(M<sub>o</sub> ρ). The completeness constraint Σ<sub>o</sub> M<sub>o</sub> = I guarantees that the probabilities of all outcomes sum to 1."},
+  {symbol:"Γ",name:"Generative operation",desc:"Γ: H<sub>t</sub> → 2<sup>H<sub>t+1</sub></sup>. The abductive step that expands the hypothesis space — the formal analogue of Peircean abduction. In the monograph's current formalization, Γ is set-valued; a fully specified stochastic version would require an additional probability law to define a distribution over the expanded space. This is one of the formalization's open technical questions."},
+  {symbol:"γ",name:"Discount factor",desc:"Same as in the classical POMDP."}
+];
+var qdpomdpGrid=document.getElementById("qdpomdp-tuple");
+var qdpomdpDetail=document.getElementById("qdpomdp-detail");
+QDPOMDP_COMPONENTS.forEach(function(c,i){var card=document.createElement("div");card.className="tuple-card";card.innerHTML='<div class="symbol">'+c.symbol+'</div><div class="name">'+c.name+'</div>';card.addEventListener("click",function(){document.querySelectorAll("#qdpomdp-tuple .tuple-card").forEach(function(x){x.classList.remove("selected")});card.classList.add("selected");qdpomdpDetail.innerHTML='<h4>'+c.symbol+' — '+c.name+'</h4><p>'+c.desc+'</p>'});qdpomdpGrid.appendChild(card)});
+
+function updateQubit(){var theta=+document.getElementById("q-theta").value;var phi=+document.getElementById("q-phi").value;document.getElementById("q-θ-val").textContent=theta.toFixed(2);document.getElementById("q-φ-val").textContent=phi.toFixed(2);var pPhi=Math.pow(Math.cos((theta-phi)/2),2);var pPerp=Math.pow(Math.sin((theta-phi)/2),2);var sum=pPhi+pPerp;document.getElementById("q-probs").textContent="P(|φ⟩) = "+pPhi.toFixed(3)+"  ·  P(|φ⊥⟩) = "+pPerp.toFixed(3);var note="Sum: "+sum.toFixed(3)+" (must equal 1)";if(Math.abs(theta-phi)<0.05)note+=" · θ = φ: measurement in state's own basis → certain";if(Math.abs(Math.abs(theta-phi)-Math.PI)<0.05)note+=" · θ − φ = π: measurement in orthogonal basis → certain";if(Math.abs(Math.abs(theta-phi)-Math.PI/2)<0.05)note+=" · θ − φ = π/2: equal probabilities";document.getElementById("q-note").textContent=note;var svg=document.getElementById("q-bars");svg.innerHTML="";var W=600,H=200,padL=55,padR=20,padT=20,padB=45;var chartW=W-padL-padR;var chartH=H-padT-padB;var baseline=padT+chartH;for(var i=0;i<=4;i++){var y=padT+chartH-(i/4)*chartH;svg.appendChild(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#DDD5C3","stroke-width":1}));var lbl=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#7A7A7A"});lbl.textContent=(i/4).toFixed(2);svg.appendChild(lbl)}drawAxes(svg,W,H,padL,padR,padT,padB);var barW=chartW*0.25;var slot=chartW/2;[pPhi,pPerp].forEach(function(v,i){var x=padL+i*slot+(slot-barW)/2;var h=v*chartH;var y=baseline-h;var color=i===0?"#2D5AA0":"#B8860B";svg.appendChild(svgEl("rect",{x:x,y:y,width:barW,height:h,fill:color,rx:4}));var lbl=svgEl("text",{x:x+barW/2,y:baseline+20,"text-anchor":"middle","font-size":13,fill:"#2A2A2A","font-weight":500});lbl.textContent=i===0?"|φ⟩":"|φ⊥⟩";svg.appendChild(lbl);var vl=svgEl("text",{x:x+barW/2,y:y-6,"text-anchor":"middle","font-size":12,fill:"#2A2A2A","font-weight":600});vl.textContent=v.toFixed(3);svg.appendChild(vl)});var cs=document.getElementById("q-circle");cs.innerHTML="";var cx=120,cy=120,r=70;cs.appendChild(svgEl("circle",{cx:cx,cy:cy,r:r,fill:"none",stroke:"#DDD5C3","stroke-width":1.5}));cs.appendChild(svgEl("line",{x1:cx-r-15,y1:cy,x2:cx+r+15,y2:cy,stroke:"#CCCCCC","stroke-width":1}));cs.appendChild(svgEl("line",{x1:cx,y1:cy-r-15,x2:cx,y2:cy+r+15,stroke:"#CCCCCC","stroke-width":1}));var lab0=svgEl("text",{x:cx+r+18,y:cy+4,"font-size":12,fill:"#4A5568"});lab0.textContent="|0⟩";cs.appendChild(lab0);var lab1=svgEl("text",{x:cx-8,y:cy-r-18,"font-size":12,fill:"#4A5568"});lab1.textContent="|1⟩";cs.appendChild(lab1);var sa=theta/2;var sx=cx+r*Math.cos(sa);var sy=cy-r*Math.sin(sa);cs.appendChild(svgEl("line",{x1:cx,y1:cy,x2:sx,y2:sy,stroke:"#2D5AA0","stroke-width":3}));var ba=phi/2;var bx=cx+r*Math.cos(ba);var by=cy-r*Math.sin(ba);cs.appendChild(svgEl("line",{x1:cx,y1:cy,x2:bx,y2:by,stroke:"#B8860B","stroke-width":2,"stroke-dasharray":"6 3"}));var pbx=cx-r*Math.sin(ba);var pby=cy+r*Math.cos(ba);cs.appendChild(svgEl("line",{x1:cx,y1:cy,x2:pbx,y2:pby,stroke:"#B8860B","stroke-width":2,"stroke-dasharray":"6 3"}));var lS=svgEl("text",{x:10,y:20,"font-size":11,fill:"#2D5AA0","font-weight":600});lS.textContent="|ψ(θ)⟩";cs.appendChild(lS);var lB=svgEl("text",{x:10,y:36,"font-size":11,fill:"#B8860B","font-weight":600});lB.textContent="measurement basis";cs.appendChild(lB)}
+["q-theta","q-phi"].forEach(function(id){document.getElementById(id).addEventListener("input",updateQubit)});
+
+function initializeAll(){showMode("theocentric",document.querySelector(".mode-tab"));updateBayes();entValues=[0.25,0.25,0.25,0.25];entRender();updateAmbiv();updateTradeoff();updateQuantum();updatePhronesis();updateSpeech();updatePOMDP();updateQubit()}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initializeAll)}else{initializeAll()}
+</script>
+</body>
+</html>
