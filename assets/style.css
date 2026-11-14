@@ -118,6 +118,12 @@ html[data-theme=light] body:before{background:none}html[data-theme=light] header
 html[data-theme=light] .util a{color:#c9d1e3}html[data-theme=light] footer{background:#14213d;color:#b7c0d6}html[data-theme=light] footer a{color:#e8ecf4}
 html[data-theme=light] a:hover{color:#0b1020}html[data-theme=light] .chart{background:#0f1729}html[data-theme=light] .paper .cv{background:linear-gradient(160deg,#1c2a4c,#0d1530)}
 html[data-theme=light] tbody tr:nth-child(even) td,html[data-theme=light] table tr:nth-child(even) td{background:rgba(20,28,51,.02)}
+.tag.tr{border-style:dashed;color:var(--mute)}
+/* ---- the leaders we follow */
+.fps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0 18px}@media(max-width:980px){.fps{grid-template-columns:repeat(2,1fr)}}
+.fp{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border:1px solid var(--line2);border-radius:6px;text-decoration:none;color:var(--ink)}
+a.fp:hover{border-color:var(--gold)}.fp b{font:600 17px/1.25 var(--serif)}.fp span{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.fp em{font-style:normal;font-weight:600;color:var(--gold);margin-top:4px}.fp small{font-size:12px;color:var(--mute);line-height:1.4}.fp.off{opacity:.72}.fp.off em{color:var(--mute)}
 /* ---- the nine words */
 .tag.gw{background:rgba(201,164,92,.14);border-color:rgba(201,164,92,.55);color:var(--gold);text-decoration:none;font-weight:600}
 .tag.gw-bad{background:rgba(224,106,106,.12);border-color:rgba(224,106,106,.6);color:#e58b8b;text-decoration:none;font-weight:600}
