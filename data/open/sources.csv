@@ -1,247 +1,247 @@
 id,name,kind,url,country,origin,enabled,last_ok_utc,last_error_utc,documents
-amd_ir,AMD - press releases (investor relations),rss,https://ir.amd.com/rss/news-releases.xml,USA,core,1,2026-11-14T13:23:40Z,,3
-amazon_news,Amazon - company news,rss,https://www.aboutamazon.com/news/feed,USA,core,1,2026-11-14T13:23:40Z,,10
-apple_news,Apple - newsroom,rss,https://www.apple.com/newsroom/rss-feed.rss,USA,core,1,2026-11-14T13:23:40Z,,6
-bis_cbspeeches,BIS - central bankers' speeches (latest),rss,https://www.bis.org/doclist/cbspeeches.rss,INT,core,1,2026-11-14T13:23:41Z,,51
-bis_archive,"BIS - central bankers' speeches worldwide (yearly archive, since 1996)",bis_zip,https://www.bis.org/speeches/central-bank/download,INT,core,1,2026-11-14T13:23:41Z,,17132
-bis_mgmt,BIS - management speeches,rss,https://www.bis.org/doclist/mgmtspeeches.rss,INT,core,1,2026-11-14T13:23:41Z,,4
-boc_speeches,Bank of Canada - speeches,rss,https://www.bankofcanada.ca/content_type/speeches/feed/,CAN,core,1,2026-11-14T13:23:41Z,,3
-boe_speeches,Bank of England - speeches,rss,https://www.bankofengland.co.uk/rss/speeches,GBR,core,1,2026-11-14T13:23:41Z,,50
-boeing_news,Boeing - news releases and statements,rss,https://boeing.mediaroom.com/news-releases-statements?pagetemplate=rss,USA,core,1,2026-11-14T13:23:41Z,,4
-dell_ir,Dell Technologies - press releases (investor relations),rss,https://investors.delltechnologies.com/rss/news-releases.xml,USA,core,1,2026-11-14T13:23:41Z,,2
-ecb_press,European Central Bank - press releases and statements,rss,https://www.ecb.europa.eu/rss/press.html,EU,core,1,2026-11-14T13:23:41Z,,9
-ecb_speeches,"European Central Bank - speeches (official dataset, since 1997)",ecb_csv,https://www.ecb.europa.eu/press/key/shared/data/all_ECB_speeches.csv,EU,core,1,2026-11-14T13:23:41Z,,2872
-ec_speeches,"European Commission - speeches (Press Corner, full archive)",ec_api,https://ec.europa.eu/commission/presscorner/api/search,EU,core,1,2026-11-14T13:23:41Z,,17639
-eu_council,European Council / Council of the EU - press releases and remarks,rss,https://www.consilium.europa.eu/en/rss/pressreleases.ashx,EU,core,1,2026-11-14T13:23:42Z,,16
-fed_monetary,Federal Reserve - monetary policy statements,rss,https://www.federalreserve.gov/feeds/press_monetary.xml,USA,core,1,2026-11-14T13:23:42Z,,1
-fed_speeches,Federal Reserve - speeches (since 2006),fed,https://www.federalreserve.gov/feeds/speeches.xml,USA,core,1,2026-11-14T13:23:42Z,,1345
-fed_testimony,Federal Reserve - testimony to Congress,rss,https://www.federalreserve.gov/feeds/testimony.xml,USA,core,1,2026-11-14T13:23:42Z,,0
-fsb,Financial Stability Board - publications and speeches,rss,https://www.fsb.org/feed/,INT,core,1,2026-11-14T13:23:42Z,,4
-google_ai,Google - AI announcements,rss,https://blog.google/technology/ai/rss/,USA,core,1,2026-11-14T13:23:42Z,,9
-google_blog,Google - The Keyword (company blog),rss,https://blog.google/rss/,USA,core,1,2026-11-14T13:23:42Z,,17
-deepmind_blog,Google DeepMind - blog,rss,https://deepmind.google/blog/rss.xml,GBR,core,1,2026-11-14T13:23:41Z,,90
-gr_minfin,Greece - Ministry of Economy and Finance,rss,https://minfin.gov.gr/feed/,GRC,core,1,2026-11-14T13:23:43Z,,4001
-huggingface_blog,Hugging Face - blog,rss,https://huggingface.co/blog/feed.xml,USA,core,1,2026-11-14T13:23:43Z,,16
-lockheed_news,Lockheed Martin - news releases,rss,https://news.lockheedmartin.com/news-releases?pagetemplate=rss,USA,core,1,2026-11-14T13:23:43Z,,3
-meta_news,Meta - newsroom,rss,https://about.fb.com/feed/,USA,core,1,2026-11-14T13:23:43Z,,5
-microsoft_issues,Microsoft - On the Issues (policy statements),rss,https://blogs.microsoft.com/on-the-issues/feed/,USA,core,1,2026-11-14T13:23:43Z,,1
-microsoft_blog,Microsoft - official blog,rss,https://blogs.microsoft.com/feed/,USA,core,1,2026-11-14T13:23:43Z,,2
-nvidia_blog,NVIDIA - blog,rss,https://blogs.nvidia.com/feed/,USA,core,1,2026-11-14T13:23:44Z,,18
-nvidia_news,NVIDIA - newsroom,rss,https://nvidianews.nvidia.com/releases.xml,USA,core,1,2026-11-14T13:23:44Z,,5
-norges_speeches,Norges Bank - speeches,rss,https://www.norges-bank.no/en/rss-feeds/Speeches---Norges-Bank/,NOR,core,1,2026-11-14T13:23:44Z,,2
-openai_news,OpenAI - news and statements,rss,https://openai.com/news/rss.xml,USA,core,1,2026-11-14T13:23:44Z,,1021
-kremlin_transcripts,"President of Russia - transcripts (Kremlin, full archive; only the President's own words)",kremlin,http://en.kremlin.ru/events/president/transcripts/feed,RUS,core,1,2026-11-14T13:23:43Z,,591
-aus_pm,Prime Minister of Australia - media,rss,https://www.pm.gov.au/rss.xml,AUS,core,1,2026-11-14T13:23:41Z,,24
-canada_pm,Prime Minister of Canada - news,rss,https://www.pm.gc.ca/en/news.rss,CAN,core,1,2026-11-14T13:23:41Z,,13
-gr_primeminister,Prime Minister of Greece - office,rss,https://www.primeminister.gr/feed,GRC,core,1,2026-11-14T13:23:43Z,,4002
-japan_pm,Prime Minister of Japan and Cabinet (Kantei),rss,https://japan.kantei.go.jp/index-e2.rdf,JPN,core,1,2026-11-14T13:23:43Z,,18
-rba_speeches,Reserve Bank of Australia - speeches,rss,https://www.rba.gov.au/rss/rss-cb-speeches.xml,AUS,core,1,2026-11-14T13:23:44Z,,0
-sap_news,SAP - news center,rss,https://news.sap.com/feed/,DEU,core,1,2026-11-14T13:23:44Z,,24
-salesforce_news,Salesforce - newsroom,rss,https://www.salesforce.com/news/feed/,USA,core,1,2026-11-14T13:23:44Z,,10
-sam_altman,Sam Altman - personal blog,rss,https://blog.samaltman.com/posts.atom,USA,core,1,2026-11-14T13:23:44Z,,0
-samsung_news,Samsung Electronics - global newsroom,rss,https://news.samsung.com/global/feed,KOR,core,1,2026-11-14T13:23:44Z,,7
-ng_presidency,State House Nigeria - statements,rss,https://statehouse.gov.ng/feed/,NGA,core,1,2026-11-14T13:23:44Z,,10
-riksbank_speeches,Sveriges Riksbank - speeches,rss,https://www.riksbank.se/en-gb/rss/speeches/,SWE,core,1,2026-11-14T13:23:44Z,,3
-snb_speeches,Swiss National Bank - speeches,rss,https://www.snb.ch/public/en/rss/speeches,CHE,core,1,2026-11-14T13:23:44Z,,1
-za_presidency,The Presidency of South Africa - statements,rss,https://www.thepresidency.gov.za/rss.xml,ZAF,core,1,2026-11-14T13:23:46Z,,10
-whitehouse,The White House - briefings and statements,rss,https://www.whitehouse.gov/briefings-statements/feed/,USA,core,1,2026-11-14T13:23:45Z,,507
-whitehouse_news,"The White House - news, releases and fact sheets",rss,https://www.whitehouse.gov/news/feed/,USA,core,1,2026-11-14T13:23:45Z,,1692
-whitehouse_remarks,The White House - remarks and addresses,rss,https://www.whitehouse.gov/remarks/feed/,USA,core,1,2026-11-14T13:23:45Z,,0
-toyota_news,Toyota - global newsroom,rss,https://global.toyota/export/en/allnews_rss.xml,JPN,core,1,2026-11-14T13:23:45Z,,8
-us_cftc,U.S. Commodity Futures Trading Commission - speeches and testimony,rss,https://www.cftc.gov/RSS/RSSST/rssst.xml,USA,core,1,2026-11-14T13:23:45Z,,2
-us_state_secretary,U.S. Department of State - Secretary's remarks,rss,https://www.state.gov/rss-feed/secretarys-remarks/feed/,USA,core,1,2026-11-14T13:23:45Z,,11
-us_sec,U.S. Securities and Exchange Commission - speeches and statements,rss,https://www.sec.gov/news/speeches-statements.rss,USA,core,1,2026-11-14T13:23:45Z,,0
-govuk_speeches,"UK Government - ministers' speeches (GOV.UK, full archive)",govuk,https://www.gov.uk/api/search.json,GBR,core,1,2026-11-14T13:23:42Z,,13411
-un_press,United Nations - meetings coverage and press releases,rss,https://press.un.org/en/rss.xml,INT,core,1,2026-11-14T13:23:45Z,,6
-un_sg,United Nations Secretary-General - statements and speeches,rss,https://www.un.org/sg/en/rss.xml,INT,core,1,2026-11-14T13:23:45Z,,0
-worldbank_speeches,World Bank Group - speeches and transcripts (full archive),worldbank,https://search.worldbank.org/api/v2/news,INT,core,1,2026-11-14T13:23:45Z,,1514
-wto_news,World Trade Organization - news,rss,https://www.wto.org/library/rss/latest_news_e.xml,INT,core,1,2026-11-14T13:23:45Z,,10
-px_af_mfa_auto,Afghanistan — Ministry of Foreign Affairs,listing,https://mfa.gov.af/en/,AFG,proxenos,1,2026-11-14T13:23:46Z,,11
-px_au_press_en,African Union — press releases (EN),listing,https://au.int/en/pressreleases,Q7159,proxenos,1,2026-11-14T13:23:49Z,,15
-px_dz_mfa_en,Algeria — Ministry of Foreign Affairs and National Community Abroad (EN),listing,https://www.mfa.gov.dz/press-and-information/news-and-press-releases,DZA,proxenos,1,2026-11-14T13:24:11Z,,10
-px_ad_mfa_auto,Andorra — Ministeri d'Afers Exteriors - Govern d’Andorra,listing,https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-d-afers-exteriors,AND,proxenos,1,2026-11-14T13:23:46Z,,4
-px_ag_mfa_auto,"Antigua and Barbuda — Ministry of Foreign Affairs, Trade and Barbuda Affairs",listing,https://foreignaffairs.gov.ag/,ATG,proxenos,1,2026-11-14T13:23:46Z,,2
-px_arctic_council_en,Arctic Council — news (EN),listing,https://arctic-council.org/news/,O-ARCTIC,proxenos,1,2026-11-14T13:23:49Z,,25
-px_am_mod_en,"Armenia — Ministry of Defence, news (EN)",listing,https://mil.am/en/news,ARM,proxenos,1,2026-11-14T13:23:49Z,,12
-px_am_mod_hy,"Armenia — Ministry of Defence, news (HY)",listing,https://www.mil.am/hy/news,ARM,proxenos,1,2026-11-14T13:23:49Z,,12
-px_am_mfa_en,"Armenia — Ministry of Foreign Affairs, press releases (EN)",listing,https://www.mfa.am/en/press-releases/,ARM,proxenos,1,2026-11-14T13:23:46Z,,10
-px_am_mfa_hy,"Armenia — Ministry of Foreign Affairs, press releases (HY)",listing,https://www.mfa.am/hy/press-releases/,ARM,proxenos,1,2026-11-14T13:23:49Z,,11
-px_am_president_en,"Armenia — President, press releases (EN)",listing,https://www.president.am/en/press-release/,ARM,proxenos,1,2026-11-14T13:23:49Z,,6
-px_am_president_hy,"Armenia — President, press releases (HY)",listing,https://www.president.am/hy/press-release/,ARM,proxenos,1,2026-11-14T13:23:49Z,,0
-px_am_pm_en,"Armenia — Prime Minister, press releases (EN)",listing,https://www.primeminister.am/en/press-release/,ARM,proxenos,1,2026-11-14T13:23:49Z,,6
-px_am_pm_hy,"Armenia — Prime Minister, press releases (HY)",listing,https://www.primeminister.am/hy/press-release/,ARM,proxenos,1,2026-11-14T13:23:49Z,,7
-px_at_bka_de,"Austria — Federal Chancellery, news of the Federal Government (DE)",listing,https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/{year}.html,AUT,proxenos,1,,2026-11-14T13:23:49Z,0
-px_az_president_pressinfo_az,"Azerbaijan — President, press information (AZ)",listing,https://president.az/az/news/category/press_info,AZE,proxenos,1,2026-11-14T13:23:49Z,,12
-px_az_president_statements_az,"Azerbaijan — President, statements and joint declarations (AZ)",listing,https://president.az/az/documents/category/statements,AZE,proxenos,1,2026-11-14T13:23:49Z,,12
-px_bs_mfa_auto,Bahamas — Ministry of Foreign Affairs The Commonwealth of The Bahamas -,rss,https://mofa.gov.bs/feed/,BHS,proxenos,1,2026-11-14T13:24:11Z,2026-11-13T17:48:53Z,10
-px_bd_ispr_bn,Bangladesh — Inter Services Public Relations (BN),rss,https://ispr.gov.bd/feed/,BGD,proxenos,1,2026-11-14T13:23:59Z,,10
-px_bb_mfa_auto,Barbados — Foreign Affairs and Foreign Trade - Barbados,rss,https://www.foreign.gov.bb/feed/,BRB,proxenos,1,2026-11-14T13:23:52Z,,10
-px_by_mfa_auto,Belarus — News - Ministry of Foreign Affairs of the Republic of Belarus,listing,https://mfa.gov.by/en/press/statements/,BLR,proxenos,1,2026-11-14T13:24:11Z,,1
-px_be_mfa_en,"Belgium — FPS Foreign Affairs, news (EN)",listing,https://diplomatie.belgium.be/en/news,BEL,proxenos,1,2026-11-14T13:23:59Z,,8
-px_bz_mfa_auto,Belize — The Ministry of Foreign Affairs and Foreign Trade | Belize,rss,https://mfa.gov.bz/feed/,BLZ,proxenos,1,2026-11-14T13:24:11Z,,10
-px_bt_mfa_auto,Bhutan — Ministry of Foreign Affairs and External Trade – RGOB,rss,https://www.mfa.gov.bt/feed/,BTN,proxenos,1,2026-11-14T13:24:11Z,,10
-px_bo_mfa_auto,Bolivia — CANCILLERIA :: BOLIVIA,rss,https://cancilleria.gob.bo/mre/feed/,BOL,proxenos,1,2026-11-14T13:24:11Z,,10
-px_ba_vm_bs,Bosnia and Herzegovina — Council of Ministers (BS),listing,https://www.vijeceministara.gov.ba/bs/,BIH,proxenos,1,2026-11-14T13:23:52Z,2026-11-13T17:48:59Z,11
-px_ba_presidency_bs,"Bosnia and Herzegovina — Presidency, press releases (BS)",listing,https://www.predsjednistvobih.ba/saop/Archive.aspx,BIH,proxenos,1,2026-11-14T13:23:52Z,,0
-px_br_mfa_auto,Brazil — Press Releases — Ministério das Relações Exteriores,rss,https://www.gov.br/rss.xml,BRA,proxenos,1,2026-11-14T13:24:11Z,,104
-px_bg_gov_bg,"Bulgaria — Council of Ministers, press centre (BG)",listing,https://www.gov.bg/bg/prestsentar/novini,BGR,proxenos,1,2026-11-14T13:23:59Z,,12
-px_bg_mfa_bg,"Bulgaria — Ministry of Foreign Affairs, news (BG)",rss,https://www.mfa.bg/bg/rss,BGR,proxenos,1,2026-11-14T06:04:39Z,2026-11-14T13:23:59Z,20
-px_bg_president_bg,"Bulgaria — President, news (BG)",listing,https://www.president.bg/,BGR,proxenos,1,2026-11-14T13:24:11Z,,9
-px_bf_mfa_auto,Burkina Faso — Ministère des Affaires Etrangères – Burkina Faso,rss,https://diplomatie.gov.bf/index.php/feed/,BFA,proxenos,1,2026-11-14T13:23:59Z,,10
-px_bi_mfa_auto,Burundi — Accueil - Ministère des Affaires Etrangères du Burundi,rss,https://www.mae.gov.bi/feed/,BDI,proxenos,1,2026-11-14T13:24:11Z,2026-11-14T12:54:29Z,7
-px_caricom_org_auto,CARICOM — caricom.org,listing,https://caricom.org/news-feature-caribbean-community-successfully-keeps-low-covid-19-infection-rates/,O-CARICOM,proxenos,1,2026-11-14T13:24:11Z,,7
-px_cv_mfa_auto,Cabo Verde — Página Oficial do Governo de Cabo Verde,listing,https://www.governo.cv/,CPV,proxenos,1,2026-11-14T13:24:11Z,,6
-px_cm_mfa_auto,Cameroon — diplocam.cm,rss,https://www.diplocam.cm/feed/,CMR,proxenos,1,2026-11-14T13:24:11Z,,5
-px_ca_gac_en,"Canada — Global Affairs Canada news (EN, Atom)",rss,https://api.io.canada.ca/io-server/gc/news/en/v2?dept=departmentofforeignaffairstradeanddevelopment&sort=publishedDate&orderBy=desc&pick=50&format=atom&atomtitle=Global%20Affairs%20Canada,CAN,proxenos,1,2026-11-14T13:24:11Z,,53
-px_cn_mfa_en,China — Ministry of Foreign Affairs spokesperson (EN),listing,https://www.fmprc.gov.cn/eng/xw/fyrbt/,CHN,proxenos,1,2026-11-14T13:24:11Z,,7
-px_cn_mfa_news_zh,"China — Ministry of Foreign Affairs, major news (ZH)",listing,https://www.fmprc.gov.cn/zyxw/index.shtml,CHN,proxenos,1,2026-11-14T13:24:11Z,,27
-px_cn_mfa_briefings_zh,"China — Ministry of Foreign Affairs, regular press conferences (ZH)",listing,https://www.fmprc.gov.cn/fyrbt_673021/jzhsl_673025/index.shtml,CHN,proxenos,1,2026-11-14T13:24:11Z,,25
-px_cn_mfa_spokesperson_zh,"China — Ministry of Foreign Affairs, spokesperson statements (ZH)",listing,https://www.fmprc.gov.cn/fyrbt_673021/dhdw_673027/index.shtml,CHN,proxenos,1,2026-11-14T13:24:11Z,,25
-px_cn_tao_pressconf_zh,"China — Taiwan Affairs Office of the State Council, press conferences (ZH)",listing,https://www.gwytb.gov.cn/xwdt/xwfb/xwfbh/index.htm,CHN,proxenos,1,2026-11-14T13:24:11Z,,0
-px_cn_tao_statements_zh,"China — Taiwan Affairs Office of the State Council, spokesperson statements (ZH)",listing,https://www.gwytb.gov.cn/xwdt/xwfb/wyly/index.htm,CHN,proxenos,1,2026-11-14T13:24:11Z,,0
-px_km_mfa_auto,Comoros — beit-salam.km,listing,https://www.beit-salam.km/,COM,proxenos,1,2026-11-14T13:24:29Z,,4
-px_hr_mod_hr,"Croatia — Ministry of Defence, news (HR)",rss,https://www.morh.hr/feed/,HRV,proxenos,1,2026-11-14T13:24:11Z,,20
-px_hr_mfa_auto,Croatia — Ministry of Foreign Affairs of the Republic of Croatia - Homepage,listing,https://mvep.gov.hr/en,HRV,proxenos,1,2026-11-14T13:24:11Z,,4
-px_hr_mfa_hr,"Croatia — Ministry of Foreign and European Affairs, news (HR)",listing,https://mvep.gov.hr/vijesti/8,HRV,proxenos,1,2026-11-14T13:24:11Z,,18
-px_cu_granma_en,"Cuba — Granma, official organ of the Communist Party of Cuba (EN)",rss,https://en.granma.cu/feed/,CUB,proxenos,1,2026-11-14T13:24:11Z,,67
-px_cz_mfa_auto,Czechia — Press Releases | Ministry of Foreign Affairs of the Czech Republic,listing,https://mzv.gov.cz/jnp/en/issues_and_press/press_releases/index.mobi,CZE,proxenos,1,2026-11-14T13:24:11Z,,10
-px_cd_mfa_auto,Democratic Republic of the Congo — diplomatie.gouv.cd,rss,https://diplomatie.gouv.cd/feed/,COD,proxenos,1,2026-11-14T13:24:11Z,,10
-px_dk_mfa_auto,"Denmark — Aftale mellem Grønland, Danmark og USA - Statsministeriet",listing,https://stm.dk/presse/pressemeddelelser/2026/aftale-mellem-groenland-danmark-og-usa/,DNK,proxenos,1,2026-11-14T13:24:11Z,,1
-px_do_mfa_auto,Dominican Republic — Inicio - MIREX | Ministerio de Relaciones Exteriores,rss,https://mirex.gob.do/feed/,DOM,proxenos,1,2026-11-14T13:24:11Z,,10
-px_eccas_org_auto,ECCAS — Accueil - Site Web Officiel de la CEEAC,rss,https://www.ceeac-eccas.org/feed/,O-ECCAS,proxenos,1,2026-11-14T13:24:11Z,,10
-px_ecowas_org_auto,ECOWAS — Santo Antão,rss,https://www.ecowas.int/feed/,O-ECOWAS,proxenos,1,2026-11-14T13:24:11Z,,24
-px_eu_eeas_press,EU — European External Action Service press material,listing,https://www.eeas.europa.eu/eeas/press-material_en,Q458,proxenos,1,2026-11-14T13:24:11Z,,1
-px_eac_org_auto,East African Community — Press Releases,rss,https://www.eac.int/press-releases?format=feed&type=rss,O-EAC,proxenos,1,2026-11-14T13:24:11Z,,28
-px_gq_mfa_auto,Equatorial Guinea — Página Oficial del Gobierno de la República de Guinea Ecuatorial,listing,https://www.guineaecuatorialpress.com/,GNQ,proxenos,1,2026-11-14T13:24:11Z,,27
-px_er_shabait_en,Eritrea — Ministry of Information (EN),rss,https://shabait.com/feed/,ERI,proxenos,1,2026-11-14T13:24:11Z,,12
-px_ee_mfa_auto,Estonia — Estonian Ministry of Foreign Affairs: Homepage | Välisministeerium,listing,https://vm.ee/en,EST,proxenos,1,2026-11-14T13:24:11Z,,4
-px_et_mfa_blog_en,"Ethiopia — Ministry of Foreign Affairs, official blog (EN)",rss,https://mfaethiopia.blog/feed/,ETH,proxenos,1,2026-11-14T13:24:11Z,,10
-px_fj_mfa_auto2,Fiji — Fiji Government |,rss,https://www.fiji.gov.fj/feed/,FJI,proxenos,1,2026-11-14T13:24:11Z,,10
-px_fj_mfa_auto,Fiji — Home - Ministry of Foreign Affairs,rss,https://www.foreignaffairs.gov.fj/feed/,FJI,proxenos,1,2026-11-14T13:24:11Z,,10
-px_fi_mfa_en,Finland — Ministry for Foreign Affairs (EN),rss,https://um.fi/o/rss?dctype=asset&lang=en_US&aid=gc654PySnjTX&plid=709011,FIN,proxenos,1,2026-11-14T13:24:11Z,,20
-px_fr_mission_un_fr,France — Permanent Mission to the United Nations (FR),listing,https://onu.diplomatie.gouv.fr/fr,FRA,proxenos,1,2026-11-14T13:24:11Z,,26
-px_fr_rp_otan_fr,France — Permanent Representation to NATO (FR),listing,https://otan.diplomatie.gouv.fr/fr,FRA,proxenos,1,2026-11-14T13:24:11Z,,10
-px_fr_rp_ue_fr,France — Permanent Representation to the European Union (FR),listing,https://ue.diplomatie.gouv.fr/,FRA,proxenos,1,2026-11-14T13:24:11Z,,8
-px_fr_rp_osce_fr,France — Permanent Representation to the OSCE (FR),listing,https://osce.diplomatie.gouv.fr/,FRA,proxenos,1,2026-11-14T13:24:11Z,,8
-px_fr_elysee_fr,France — Presidency of the Republic (Élysée) (FR),rss,https://www.elysee.fr/feed/,FRA,proxenos,1,2026-11-14T13:24:11Z,,32
-px_gcc_sg_en,GCC Secretariat General (EN),listing,https://gcc-sg.org/en/MediaCenter/News/Pages/default.aspx,Q170152,proxenos,1,2026-11-14T13:24:11Z,,0
-px_ge_mfa_en,Georgia — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gov.ge/en/news,GEO,proxenos,1,2026-11-14T13:24:11Z,,12
-px_ge_mfa_ka,"Georgia — Ministry of Foreign Affairs, news (KA)",listing,https://mfa.gov.ge/ka/news,GEO,proxenos,1,2026-11-14T13:24:11Z,,12
-px_de_ffo_press_en,"Germany — Federal Foreign Office, press releases and speeches (EN)",rss,https://www.auswaertiges-amt.de/static/includes/rss_en/RSS_Pressemitteilungen_Reden.xml,DEU,proxenos,1,2026-11-13T17:48:56Z,2026-11-14T13:24:11Z,20
-px_gh_mfa_auto,Ghana — Ministry Of Foreign Affairs – Republic of Ghana,rss,https://mfa.gov.gh/index.php/feed/,GHA,proxenos,1,2026-11-14T13:24:11Z,,10
-px_gn_mfa_auto,Guinea — mae.gov.gn,listing,https://mae.gov.gn/,GIN,proxenos,1,2026-11-14T13:24:11Z,2026-11-13T20:48:07Z,4
-px_gy_mfa_auto,Guyana — Press Release | Ministry of Foreign Affairs,rss,https://www.minfor.gov.gy/taxonomy/term/21/feed,GUY,proxenos,1,2026-11-14T13:24:11Z,,7
-px_gr_mfa_en,Hellenic Republic — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gr/en/category/current-affairs/,GRC,proxenos,1,2026-11-14T13:24:11Z,,11
-px_igad_en,IGAD — Intergovernmental Authority on Development (EN),rss,https://igad.int/feed/,O-IGAD,proxenos,1,2026-11-14T13:24:12Z,,12
-px_is_gov_en,"Iceland — Government of Iceland, news (EN)",listing,https://www.government.is/news/,ISL,proxenos,1,2026-11-14T13:24:18Z,,25
-px_in_mea_en,"India — Ministry of External Affairs, press releases (EN)",listing,https://www.mea.gov.in/press-releases,IND,proxenos,1,2026-11-14T13:24:12Z,,24
-px_id_setkab_id,"Indonesia — Cabinet Secretariat, news (ID)",rss,https://setkab.go.id/feed/,IDN,proxenos,1,,2026-11-14T13:24:11Z,0
-px_id_kemhan_id,"Indonesia — Ministry of Defence, news (ID)",rss,https://www.kemhan.go.id/feed,IDN,proxenos,1,2026-11-14T13:24:11Z,,13
-px_id_setneg_id,"Indonesia — Ministry of State Secretariat, news (ID)",listing,https://www.setneg.go.id/,IDN,proxenos,1,2026-11-14T13:24:12Z,,27
-px_iq_mofa_en,Iraq — Ministry of Foreign Affairs (EN),listing,https://mofa.gov.iq/en/,IRQ,proxenos,1,2026-11-14T13:24:12Z,,6
-px_ir_mfa_fa,Islamic Republic of Iran — Ministry of Foreign Affairs (FA),listing,https://mfa.ir/,IRN,proxenos,1,,2026-11-14T13:24:18Z,0
-px_il_mfa_embassies,"Israel — MFA embassy in Athens, news (EN)",listing,https://embassies.gov.il/greece/en/news,ISR,proxenos,1,2026-11-14T13:24:12Z,,5
-px_il_embassy_usa,"Israel — MFA embassy in Washington, news (EN)",listing,https://embassies.gov.il/usa/en/news,ISR,proxenos,1,2026-11-14T13:24:12Z,,5
-px_it_mfa_en,"Italy — Ministry of Foreign Affairs (Farnesina), press releases (EN)",rss,https://www.esteri.it/en/feed/,ITA,proxenos,1,2026-11-14T06:06:10Z,2026-11-14T13:24:18Z,10
-px_jm_mfa_auto,Jamaica — MFAFT Jamaica,listing,https://mfaft.gov.jm/,JAM,proxenos,1,2026-11-14T13:24:18Z,,0
-px_jp_mod_ja,"Japan — Ministry of Defense, press releases (JA)",rss,https://www.mod.go.jp/j/rss/news.xml,JPN,proxenos,1,2026-11-14T13:24:29Z,,102
-px_jp_kantei_ja,"Japan — Prime Minister's Office (Kantei), statements and press conferences (JA)",listing,https://www.kantei.go.jp/jp/news/index.html,JPN,proxenos,1,2026-11-14T13:24:29Z,,3
-px_jo_mfa_ar,Jordan — Ministry of Foreign Affairs and Expatriates (AR),listing,https://mfa.gov.jo/News,JOR,proxenos,1,2026-11-14T13:24:29Z,,0
-px_ki_mfa_auto,Kiribati — Ministry of Foreign Affairs & Immigration,rss,https://www.mfa.gov.ki/feed/,KIR,proxenos,1,2026-11-14T13:24:29Z,,2
-px_xk_mfa_sq,Kosovo — Ministry of Foreign Affairs and Diaspora (SQ),rss,https://mfa-ks.net/feed/,XKX,proxenos,1,2026-11-14T13:24:54Z,2026-11-13T20:49:54Z,10
-px_lv_mfa_auto,Latvia — News | Ārlietu ministrija,listing,https://www.mfa.gov.lv/en/articles,LVA,proxenos,1,2026-11-14T13:24:29Z,2026-11-13T21:12:20Z,15
-px_lb_army_en,"Lebanon — Lebanese Army Command, news (EN)",rss,https://www.lebarmy.gov.lb/en/rss.xml,LBN,proxenos,1,2026-11-14T13:24:29Z,,10
-px_lb_presidency_ar,"Lebanon — Presidency of the Republic, news (AR)",listing,https://www.presidency.gov.lb/,LBN,proxenos,1,2026-11-14T13:24:29Z,,23
-px_ls_mfa_auto,Lesotho — Home - Government of Lesotho,rss,https://www.gov.ls/feed/,LSO,proxenos,1,2026-11-14T13:24:29Z,2026-11-13T17:50:00Z,10
-px_ly_mfa_auto,Libya — وزارة الخارجية والتعاون الدولي | ليبيا,listing,https://foreign.gov.ly/MOFA/,LBY,proxenos,1,2026-11-14T13:24:29Z,,8
-px_li_mfa_auto,Liechtenstein — Regierung des Fürstentums Liechtenstein - Startseite,listing,https://www.regierung.li/,LIE,proxenos,1,2026-11-14T13:24:29Z,,5
-px_lu_mae_fr,"Luxembourg — Ministry of Foreign and European Affairs, news (RSS) (FR)",rss,https://mae.gouvernement.lu/fr/actualites.rss,LUX,proxenos,1,2026-11-14T13:24:29Z,,50
-px_mg_mfa_auto,Madagascar — Accueil,listing,https://www.diplomatie.gov.mg/,MDG,proxenos,1,2026-11-14T13:24:29Z,,11
-px_mh_mfa_auto,Marshall Islands — แทงบอล กับ UFABET เว็บตรงมั่นคง เล่นง่าย จ่ายจริงทุกบิล,rss,https://rmigovernment.org/feed/,MHL,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mu_mfa_auto,Mauritius — Home,listing,https://foreign.govmu.org/Pages/default.aspx,MUS,proxenos,1,2026-11-14T13:24:29Z,,7
-px_mx_mfa_auto,Mexico — gob.mx,listing,https://www.gob.mx/sre/es/archivo/prensa,MEX,proxenos,1,2026-11-14T13:24:29Z,,11
-px_fm_mfa_auto,Micronesia — FSM Government – FSM Government,rss,https://gov.fm/feed/,FSM,proxenos,1,2026-11-14T13:24:11Z,,10
-px_md_mfa_en,Moldova — Ministry of Foreign Affairs (EN),rss,https://mfa.gov.md/en/press/feed.xml,MDA,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mc_mfa_auto,Monaco — Portail Officiel du Gouvernement Princier de Monaco,rss,https://www.gouv.mc/rss/feed/portail-gouv-actualites-fr,MCO,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mz_mfa_auto,Mozambique — MINEC – Ministério dos Negócios Estrangeiros e Cooperação,rss,https://minec.gov.mz/feed/,MOZ,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mm_mfa_auto,Myanmar — Ministry of Foreign Affairs – Republic of The Union of Myanmar,rss,https://www.mofa.gov.mm/feed/,MMR,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mm_moi_my,"Myanmar — Ministry of Information, news (MY)",listing,https://www.moi.gov.mm/,MMR,proxenos,1,2026-11-14T13:24:29Z,2026-11-14T12:59:29Z,19
-px_nato_news,NATO — news,listing,https://www.nato.int/en/news-and-events/articles/news,Q7184,proxenos,1,2026-11-14T13:24:30Z,,1
-px_nl_mfa_gov_en,"Netherlands — Ministry of Foreign Affairs, news (government.nl) (EN)",listing,https://www.government.nl/ministries/ministry-of-foreign-affairs,NLD,proxenos,1,2026-11-14T13:24:30Z,,6
-px_ng_mfa_auto,Nigeria — Latest News – MFA Press Center,rss,https://foreignaffairs.gov.ng/news/feed/,NGA,proxenos,1,2026-11-14T13:24:30Z,,5
-px_mk_mfa_en,North Macedonia — Ministry of Foreign Affairs and Foreign Trade (EN),listing,https://mfa.gov.mk/en-GB/odnosi-so-javnost/soopstenija,MKD,proxenos,1,2026-11-14T13:24:29Z,,14
-px_mk_president_en,"North Macedonia — President, news (EN)",rss,https://pretsedatel.mk/en/feed/,MKD,proxenos,1,2026-11-14T13:24:29Z,,10
-px_mk_president_mk,"North Macedonia — President, news (MK)",rss,https://pretsedatel.mk/feed/,MKD,proxenos,1,2026-11-14T13:24:29Z,,10
-px_no_mfa_en,Norway — Ministry of Foreign Affairs (EN),rss,https://www.regjeringen.no/en/rss/Rss/2581966/?owner=833,NOR,proxenos,1,2026-11-14T13:24:30Z,,76
-px_osce_stories_en,OSCE — news and stories (EN),listing,https://www.osce.org/,O-OSCE,proxenos,1,2026-11-14T13:24:30Z,,11
-px_om_mfa_en,Oman — Foreign Ministry (EN),listing,https://www.fm.gov.om/en/news/news/,OMN,proxenos,1,2026-11-14T13:24:30Z,,24
-px_om_mfa_statements,"Oman — Foreign Ministry, statements (EN)",listing,https://www.fm.gov.om/en/news/statements/,OMN,proxenos,1,2026-11-14T13:24:30Z,,15
-px_oic_org_auto,Organisation of Islamic Cooperation — Organisation of Islamic Cooperation — OIC,listing,https://www.oic-oci.org/en,O-OIC,proxenos,1,2026-11-14T13:24:30Z,,25
-px_pif_org_auto,Pacific Islands Forum — Home page | Pacific Islands Forum Secretariat,rss,https://forumsec.org/rss.xml,O-PIF,proxenos,1,2026-11-14T13:24:30Z,,11
-px_ps_wafa_en,"Palestine — WAFA, official news agency (EN)",listing,https://english.wafa.ps/,PSE,proxenos,1,2026-11-14T13:24:30Z,,43
-px_pa_mfa_auto,Panama — Ministerio de Relaciones exteriores,listing,https://mire.gob.pa/,PAN,proxenos,1,2026-11-14T13:24:30Z,,17
-px_pg_mfa_auto,Papua New Guinea — Department of Foreign Affairs (DFA) of Papua New Guinea (PNG),rss,https://www.dfa.gov.pg/feed/,PNG,proxenos,1,2026-11-14T13:24:30Z,,10
-px_pe_mfa_auto,Peru — gob.pe,listing,https://www.gob.pe/rree,PER,proxenos,1,2026-11-14T13:24:30Z,,23
-px_pl_mfa_auto,Poland — Portal Gov.pl,listing,https://www.gov.pl/,POL,proxenos,1,2026-11-14T13:24:30Z,2026-11-14T12:52:15Z,11
-px_pt_mfa_en,"Portugal — Ministry of Foreign Affairs, press releases (EN)",listing,https://portaldiplomatico.mne.gov.pt/en/communication-and-media/press-releases,PRT,proxenos,1,2026-11-14T13:24:30Z,,5
-px_qa_mofa_en,Qatar — Ministry of Foreign Affairs (EN),listing,https://mofa.gov.qa/en/latest-articles/statements,QAT,proxenos,1,2026-11-14T13:24:30Z,,5
-px_kr_president_ko,"Republic of Korea — Office of the President, briefings (KO)",listing,https://www.president.go.kr/,KOR,proxenos,1,2026-11-14T13:24:29Z,,5
-px_tr_mfa_rss,Republic of Türkiye — MFA press releases (official RSS),rss,https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4,TUR,proxenos,1,2026-11-14T13:24:37Z,,199
-px_tr_mfa_en,Republic of Türkiye — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gov.tr/sub.en.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4,TUR,proxenos,1,2026-11-14T13:24:37Z,,0
-px_tr_mfa_tr,"Republic of Türkiye — Ministry of Foreign Affairs, statements (TR)",listing,https://www.mfa.gov.tr/aciklamalar-genel.tr.mfa,TUR,proxenos,1,2026-11-14T13:24:37Z,,0
-px_tr_mfa_rss_tr,"Republic of Türkiye — Ministry of Foreign Affairs, statements RSS (TR)",rss,https://www.mfa.gov.tr/tr.rss.mfa?3fc6582e-a37b-40d1-847a-6914dc12fb60,TUR,proxenos,1,2026-11-14T13:24:37Z,,176
-px_ro_gov_en,"Romania — Government, news (EN)",listing,https://gov.ro/en/news,ROU,proxenos,1,2026-11-14T13:24:30Z,,5
-px_ro_mapn_en,"Romania — Ministry of National Defence, news (EN)",listing,https://english.mapn.ro/,ROU,proxenos,1,2026-11-14T13:24:30Z,,3
-px_ru_mission_un_ru,"Russia — Permanent Mission to the UN, news (RU)",listing,https://russiaun.ru/news/list/lang/ru,RUS,proxenos,1,2026-11-14T13:24:30Z,,18
-px_ru_mission_un,"Russia — Permanent Mission to the UN, statements (EN)",listing,https://russiaun.ru/news/list/lang/en,RUS,proxenos,1,2026-11-14T13:24:30Z,,18
-px_rw_mfa_auto,Rwanda — Home,listing,https://www.minaffet.gov.rw/,RWA,proxenos,1,2026-11-14T13:24:30Z,,3
-px_sadc_org_auto,SADC — Latest News | SADC,listing,https://www.sadc.int/latest-news,O-SADC,proxenos,1,2026-11-14T13:24:30Z,,15
-px_kn_mfa_auto,Saint Kitts and Nevis — Homepage - SKNIS,rss,https://www.sknis.gov.kn/feed/,KNA,proxenos,1,2026-11-14T13:24:29Z,,13
-px_lc_mfa_auto,Saint Lucia — Government of Saint Lucia - top 20 News articles,rss,https://www.govt.lc/news/rss,LCA,proxenos,1,2026-11-14T13:24:29Z,2026-11-14T12:16:46Z,11
-px_sn_mfa_auto,Senegal — | Ministère de l'Intégration Africaine et des Affaires Etrangères,listing,https://www.diplomatie.gouv.sn/,SEN,proxenos,1,2026-11-14T13:24:30Z,2026-11-14T07:34:53Z,9
-px_rs_gov_en,"Serbia — Government, news (EN)",listing,https://www.srbija.gov.rs/en,SRB,proxenos,1,2026-11-14T13:24:30Z,,10
-px_rs_gov_sr,"Serbia — Government, news (SR)",rss,https://www.srbija.gov.rs/rss/?change_lang=cr,SRB,proxenos,1,2026-11-14T13:24:30Z,,23
-px_rs_mod_sr,"Serbia — Ministry of Defence, news (SR)",rss,https://www.mod.gov.rs/rss.php?cir,SRB,proxenos,1,2026-11-14T13:24:30Z,,20
-px_rs_mfa_sr,"Serbia — Ministry of Foreign Affairs, media (SR)",rss,https://www.mfa.gov.rs/rss.xml,SRB,proxenos,1,2026-11-14T13:24:30Z,,24
-px_rs_mfa_en,"Serbia — Ministry of Foreign Affairs, news (EN)",listing,https://www.mfa.gov.rs/en/press-service/news,SRB,proxenos,1,2026-11-14T13:24:30Z,,12
-px_rs_president_sr,"Serbia — President, press centre (SR)",listing,https://www.predsednik.rs/,SRB,proxenos,1,2026-11-14T13:24:30Z,,13
-px_sc_mfa_auto,Seychelles — Home - Ministry of Foreign Affairs and the Diaspora,listing,https://mfa.gov.sc/,SYC,proxenos,1,2026-11-14T13:24:30Z,2026-11-13T18:40:35Z,7
-px_sco_org_auto,Shanghai Cooperation Organisation — The Shanghai cooperation organisation,listing,https://eng.sectsco.org/,O-SCO,proxenos,1,2026-11-14T13:24:30Z,,7
-px_sg_mfa_auto,"Singapore — Press Statements, Transcripts & Photos | Ministry of Foreign Affairs",rss,https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/rss.xml,SGP,proxenos,1,2026-11-14T13:24:30Z,,201
-px_si_gov_sl,"Slovenia — Government, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=936,SVN,proxenos,1,2026-11-14T13:24:30Z,,100
-px_si_mod_sl,"Slovenia — Ministry of Defence, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=30,SVN,proxenos,1,2026-11-14T13:24:30Z,,100
-px_si_mfa_sl,"Slovenia — Ministry of Foreign and European Affairs, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=3745,SVN,proxenos,1,2026-11-14T13:24:30Z,,101
-px_si_mfa_auto,Slovenia — News | GOV.SI,rss,https://www.gov.si/en/news/rss,SVN,proxenos,1,2026-11-14T13:24:30Z,,102
-px_so_mfa_en,Somalia — Ministry of Foreign Affairs and International Cooperation (EN),rss,https://web.mfa.gov.so/category/press-release/feed/,SOM,proxenos,1,2026-11-14T13:24:37Z,,10
-px_za_mfa_auto,South Africa — Media Statement Archives - DIRCO,listing,https://dirco.gov.za/media-statements/,ZAF,proxenos,1,2026-11-14T13:24:54Z,,2
-px_es_mfa_en,"Spain — Ministry of Foreign Affairs, EU and Cooperation, press releases (EN)",listing,https://www.exteriores.gob.es/en/Comunicacion/NotasPrensa/Paginas/index.aspx,ESP,proxenos,1,2026-11-14T13:24:11Z,,0
-px_lk_mfa_auto,"Sri Lanka — Ministry of Foreign Affairs, Foreign Employment & Tourism",rss,https://www.mfa.gov.lk/rss.xml,LKA,proxenos,1,2026-11-14T13:24:29Z,,10
-px_il_mod_he,"State of Israel — Ministry of Defense, news (HE)",listing,https://www.mod.gov.il/כתבות-ומבזקים/חדשות-משרד-הביטחון,ISR,proxenos,1,2026-11-14T13:24:12Z,2026-11-13T17:49:32Z,4
-px_il_president_he,"State of Israel — Office of the President, news (HE)",rss,https://www.president.gov.il/feed/,ISR,proxenos,1,2026-11-14T13:24:12Z,,0
-px_sd_embassy_us_en,"Sudan — Embassy in Washington, press releases (EN)",rss,https://sudanembassy.org/category/press-release/feed/,SDN,proxenos,1,2026-11-14T13:24:30Z,,1
-px_sd_gov_ar,"Sudan — Government of the Republic of the Sudan, news (AR)",rss,https://sudan.gov.sd/feed/,SDN,proxenos,1,2026-11-14T13:24:30Z,,11
-px_sr_mfa_auto,Suriname — Home,rss,https://gov.sr/feed/,SUR,proxenos,1,2026-11-14T13:24:37Z,,17
-px_ch_fdfa_news_en,"Switzerland — Federal Department of Foreign Affairs, news overview (EN)",listing,https://www.eda.admin.ch/en/news-overview,CHE,proxenos,1,2026-11-14T13:24:11Z,,25
-px_sy_sana_en,"Syria — SANA, official news agency (EN)",rss,https://sana.sy/en/feed/,SYR,proxenos,1,2026-11-14T13:24:37Z,,10
-px_st_mfa_auto,São Tomé and Príncipe — Portal do Cidadão - São Tomé e Príncipe,listing,https://gov.st/,STP,proxenos,1,2026-11-14T13:24:37Z,2026-11-14T07:45:23Z,6
-px_th_mfa_th,"Thailand — Ministry of Foreign Affairs, press releases (TH)",listing,https://www.mfa.go.th/th/page/%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%97%E0%B8%A8?menu=5d5bd3cb15e39c306002a9ad,THA,proxenos,1,2026-11-14T13:24:37Z,,11
-px_th_mfa_auto,Thailand — Press Releases -,listing,https://www.mfa.go.th/en/page/press-releases?menu=5d5bd3cb15e39c306002a9b0,THA,proxenos,1,2026-11-14T13:24:37Z,,11
-px_tt_mfa_auto,Trinidad and Tobago — Ministry of Foreign and CARICOM Affairs | Welcome,rss,https://foreign.gov.tt/feed/,TTO,proxenos,1,2026-11-14T13:24:37Z,,59
-px_tm_mfa_auto,Turkmenistan — News,listing,https://www.mfa.gov.tm/en/news,TKM,proxenos,1,2026-11-14T13:24:37Z,,14
-px_tr_iletisim_tr,"Türkiye — Directorate of Communications, news (TR)",listing,https://www.iletisim.gov.tr/turkce/haberler,TUR,proxenos,1,2026-11-14T13:24:37Z,2026-11-13T21:25:30Z,11
-px_uk_fcdo_news,UK FCDO — news and communications (GOV.UK Atom),rss,https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=foreign-commonwealth-development-office,GBR,proxenos,1,2026-11-14T13:24:37Z,,5
-px_ug_mfa_auto,Uganda — MoFA | The Republic of Uganda,rss,https://www.mofa.go.ug/rss.xml,UGA,proxenos,1,2026-11-14T13:24:37Z,,10
-px_ua_mission_un_en,"Ukraine — Permanent Mission to the United Nations, press centre (EN)",listing,https://ukraineun.org/en/press-center/,UKR,proxenos,1,2026-11-14T13:24:37Z,,9
-px_ae_mofa_en,United Arab Emirates — Ministry of Foreign Affairs (EN),listing,https://www.mofa.gov.ae/en/mediahub/news,ARE,proxenos,1,2026-11-14T13:23:46Z,,22
-px_un_sc_press,"United Nations — press releases (RSS, all bodies; Security Council items filtered by content)",rss,https://press.un.org/feed/,Q37470,proxenos,1,2026-11-14T13:24:37Z,,12
-px_us_ustr_en,"United States — Office of the Trade Representative, press office (EN)",rss,https://ustr.gov/rss.xml,USA,proxenos,1,2026-11-14T13:24:37Z,,10
-px_us_wh_actions_en,"United States — The White House, presidential actions (EN)",rss,https://www.whitehouse.gov/presidential-actions/feed/,USA,proxenos,1,2026-11-14T13:24:37Z,,25
-px_uy_mfa_auto,Uruguay — Noticias | Ministerio de Relaciones Exteriores,listing,https://www.gub.uy/ministerio-relaciones-exteriores/comunicacion/noticias,URY,proxenos,1,2026-11-14T13:24:37Z,,10
-px_vn_mofa_vi,"Viet Nam — Ministry of Foreign Affairs, news and spokesperson (VI)",listing,https://mofa.gov.vn/,VNM,proxenos,1,2026-11-14T13:24:54Z,,15
-px_vn_mofa_spokesperson_vi,"Viet Nam — Ministry of Foreign Affairs, spokesperson (VI)",listing,https://mofa.gov.vn/nguoi-phat-ngon,VNM,proxenos,1,2026-11-14T13:24:53Z,,20
-px_ye_saba_en,"Yemen — SABA, government news agency (EN)",rss,https://www.sabanew.net/rss.php?lang=en,YEM,proxenos,1,2026-11-14T13:24:54Z,,20
-px_gr_mfa_el,Υπουργείο Εξωτερικών (EL),listing,https://www.mfa.gr/category/epikairotita/,GRC,proxenos,1,2026-11-14T13:24:11Z,,15
-px_eg_mfa_ar,"مصر — وزارة الخارجية، بيانات (Egypt MFA statements, AR)",listing,https://www.mfa.gov.eg/ar/Ministers/StatementsAndWordsOfTheMinisterOfForeignAffairs,EGY,proxenos,1,2026-11-14T13:24:11Z,,22
+amd_ir,AMD - press releases (investor relations),rss,https://ir.amd.com/rss/news-releases.xml,USA,core,1,2026-11-14T13:29:11Z,,3
+amazon_news,Amazon - company news,rss,https://www.aboutamazon.com/news/feed,USA,core,1,2026-11-14T13:29:11Z,,10
+apple_news,Apple - newsroom,rss,https://www.apple.com/newsroom/rss-feed.rss,USA,core,1,2026-11-14T13:29:11Z,,6
+bis_cbspeeches,BIS - central bankers' speeches (latest),rss,https://www.bis.org/doclist/cbspeeches.rss,INT,core,1,2026-11-14T13:29:12Z,,51
+bis_archive,"BIS - central bankers' speeches worldwide (yearly archive, since 1996)",bis_zip,https://www.bis.org/speeches/central-bank/download,INT,core,1,2026-11-14T13:29:12Z,,17132
+bis_mgmt,BIS - management speeches,rss,https://www.bis.org/doclist/mgmtspeeches.rss,INT,core,1,2026-11-14T13:29:12Z,,4
+boc_speeches,Bank of Canada - speeches,rss,https://www.bankofcanada.ca/content_type/speeches/feed/,CAN,core,1,2026-11-14T13:29:12Z,,3
+boe_speeches,Bank of England - speeches,rss,https://www.bankofengland.co.uk/rss/speeches,GBR,core,1,2026-11-14T13:29:12Z,,50
+boeing_news,Boeing - news releases and statements,rss,https://boeing.mediaroom.com/news-releases-statements?pagetemplate=rss,USA,core,1,2026-11-14T13:29:12Z,,4
+dell_ir,Dell Technologies - press releases (investor relations),rss,https://investors.delltechnologies.com/rss/news-releases.xml,USA,core,1,2026-11-14T13:29:12Z,,2
+ecb_press,European Central Bank - press releases and statements,rss,https://www.ecb.europa.eu/rss/press.html,EU,core,1,2026-11-14T13:29:12Z,,9
+ecb_speeches,"European Central Bank - speeches (official dataset, since 1997)",ecb_csv,https://www.ecb.europa.eu/press/key/shared/data/all_ECB_speeches.csv,EU,core,1,2026-11-14T13:29:12Z,,2872
+ec_speeches,"European Commission - speeches (Press Corner, full archive)",ec_api,https://ec.europa.eu/commission/presscorner/api/search,EU,core,1,2026-11-14T13:29:12Z,,17639
+eu_council,European Council / Council of the EU - press releases and remarks,rss,https://www.consilium.europa.eu/en/rss/pressreleases.ashx,EU,core,1,2026-11-14T13:29:12Z,,16
+fed_monetary,Federal Reserve - monetary policy statements,rss,https://www.federalreserve.gov/feeds/press_monetary.xml,USA,core,1,2026-11-14T13:29:12Z,,1
+fed_speeches,Federal Reserve - speeches (since 2006),fed,https://www.federalreserve.gov/feeds/speeches.xml,USA,core,1,2026-11-14T13:29:13Z,,1345
+fed_testimony,Federal Reserve - testimony to Congress,rss,https://www.federalreserve.gov/feeds/testimony.xml,USA,core,1,2026-11-14T13:29:13Z,,0
+fsb,Financial Stability Board - publications and speeches,rss,https://www.fsb.org/feed/,INT,core,1,2026-11-14T13:29:13Z,,4
+google_ai,Google - AI announcements,rss,https://blog.google/technology/ai/rss/,USA,core,1,2026-11-14T13:29:13Z,,9
+google_blog,Google - The Keyword (company blog),rss,https://blog.google/rss/,USA,core,1,2026-11-14T13:29:13Z,,17
+deepmind_blog,Google DeepMind - blog,rss,https://deepmind.google/blog/rss.xml,GBR,core,1,2026-11-14T13:29:12Z,,90
+gr_minfin,Greece - Ministry of Economy and Finance,rss,https://minfin.gov.gr/feed/,GRC,core,1,2026-11-14T13:29:13Z,,4001
+huggingface_blog,Hugging Face - blog,rss,https://huggingface.co/blog/feed.xml,USA,core,1,2026-11-14T13:29:13Z,,16
+lockheed_news,Lockheed Martin - news releases,rss,https://news.lockheedmartin.com/news-releases?pagetemplate=rss,USA,core,1,2026-11-14T13:29:14Z,,3
+meta_news,Meta - newsroom,rss,https://about.fb.com/feed/,USA,core,1,2026-11-14T13:29:14Z,,5
+microsoft_issues,Microsoft - On the Issues (policy statements),rss,https://blogs.microsoft.com/on-the-issues/feed/,USA,core,1,2026-11-14T13:29:14Z,,1
+microsoft_blog,Microsoft - official blog,rss,https://blogs.microsoft.com/feed/,USA,core,1,2026-11-14T13:29:14Z,,2
+nvidia_blog,NVIDIA - blog,rss,https://blogs.nvidia.com/feed/,USA,core,1,2026-11-14T13:29:15Z,,18
+nvidia_news,NVIDIA - newsroom,rss,https://nvidianews.nvidia.com/releases.xml,USA,core,1,2026-11-14T13:29:15Z,,5
+norges_speeches,Norges Bank - speeches,rss,https://www.norges-bank.no/en/rss-feeds/Speeches---Norges-Bank/,NOR,core,1,2026-11-14T13:29:15Z,,2
+openai_news,OpenAI - news and statements,rss,https://openai.com/news/rss.xml,USA,core,1,2026-11-14T13:29:15Z,,1021
+kremlin_transcripts,"President of Russia - transcripts (Kremlin, full archive; only the President's own words)",kremlin,http://en.kremlin.ru/events/president/transcripts/feed,RUS,core,1,2026-11-14T13:29:14Z,,591
+aus_pm,Prime Minister of Australia - media,rss,https://www.pm.gov.au/rss.xml,AUS,core,1,2026-11-14T13:29:12Z,,24
+canada_pm,Prime Minister of Canada - news,rss,https://www.pm.gc.ca/en/news.rss,CAN,core,1,2026-11-14T13:29:12Z,,13
+gr_primeminister,Prime Minister of Greece - office,rss,https://www.primeminister.gr/feed,GRC,core,1,2026-11-14T13:29:13Z,,4002
+japan_pm,Prime Minister of Japan and Cabinet (Kantei),rss,https://japan.kantei.go.jp/index-e2.rdf,JPN,core,1,2026-11-14T13:29:13Z,,18
+rba_speeches,Reserve Bank of Australia - speeches,rss,https://www.rba.gov.au/rss/rss-cb-speeches.xml,AUS,core,1,2026-11-14T13:29:15Z,,0
+sap_news,SAP - news center,rss,https://news.sap.com/feed/,DEU,core,1,2026-11-14T13:29:15Z,,24
+salesforce_news,Salesforce - newsroom,rss,https://www.salesforce.com/news/feed/,USA,core,1,2026-11-14T13:29:15Z,,10
+sam_altman,Sam Altman - personal blog,rss,https://blog.samaltman.com/posts.atom,USA,core,1,2026-11-14T13:29:15Z,,0
+samsung_news,Samsung Electronics - global newsroom,rss,https://news.samsung.com/global/feed,KOR,core,1,2026-11-14T13:29:15Z,,7
+ng_presidency,State House Nigeria - statements,rss,https://statehouse.gov.ng/feed/,NGA,core,1,2026-11-14T13:29:15Z,,10
+riksbank_speeches,Sveriges Riksbank - speeches,rss,https://www.riksbank.se/en-gb/rss/speeches/,SWE,core,1,2026-11-14T13:29:15Z,,3
+snb_speeches,Swiss National Bank - speeches,rss,https://www.snb.ch/public/en/rss/speeches,CHE,core,1,2026-11-14T13:29:15Z,,1
+za_presidency,The Presidency of South Africa - statements,rss,https://www.thepresidency.gov.za/rss.xml,ZAF,core,1,2026-11-14T13:29:16Z,,10
+whitehouse,The White House - briefings and statements,rss,https://www.whitehouse.gov/briefings-statements/feed/,USA,core,1,2026-11-14T13:29:15Z,,507
+whitehouse_news,"The White House - news, releases and fact sheets",rss,https://www.whitehouse.gov/news/feed/,USA,core,1,2026-11-14T13:29:16Z,,1692
+whitehouse_remarks,The White House - remarks and addresses,rss,https://www.whitehouse.gov/remarks/feed/,USA,core,1,2026-11-14T13:29:16Z,,0
+toyota_news,Toyota - global newsroom,rss,https://global.toyota/export/en/allnews_rss.xml,JPN,core,1,2026-11-14T13:29:15Z,,8
+us_cftc,U.S. Commodity Futures Trading Commission - speeches and testimony,rss,https://www.cftc.gov/RSS/RSSST/rssst.xml,USA,core,1,2026-11-14T13:29:15Z,,2
+us_state_secretary,U.S. Department of State - Secretary's remarks,rss,https://www.state.gov/rss-feed/secretarys-remarks/feed/,USA,core,1,2026-11-14T13:29:15Z,,11
+us_sec,U.S. Securities and Exchange Commission - speeches and statements,rss,https://www.sec.gov/news/speeches-statements.rss,USA,core,1,2026-11-14T13:29:15Z,,0
+govuk_speeches,"UK Government - ministers' speeches (GOV.UK, full archive)",govuk,https://www.gov.uk/api/search.json,GBR,core,1,2026-11-14T13:29:13Z,,13411
+un_press,United Nations - meetings coverage and press releases,rss,https://press.un.org/en/rss.xml,INT,core,1,2026-11-14T13:29:15Z,,6
+un_sg,United Nations Secretary-General - statements and speeches,rss,https://www.un.org/sg/en/rss.xml,INT,core,1,2026-11-14T13:29:15Z,,0
+worldbank_speeches,World Bank Group - speeches and transcripts (full archive),worldbank,https://search.worldbank.org/api/v2/news,INT,core,1,2026-11-14T13:29:16Z,,1514
+wto_news,World Trade Organization - news,rss,https://www.wto.org/library/rss/latest_news_e.xml,INT,core,1,2026-11-14T13:29:16Z,,10
+px_af_mfa_auto,Afghanistan — Ministry of Foreign Affairs,listing,https://mfa.gov.af/en/,AFG,proxenos,1,2026-11-14T13:29:20Z,,11
+px_au_press_en,African Union — press releases (EN),listing,https://au.int/en/pressreleases,Q7159,proxenos,1,2026-11-14T13:29:20Z,,15
+px_dz_mfa_en,Algeria — Ministry of Foreign Affairs and National Community Abroad (EN),listing,https://www.mfa.gov.dz/press-and-information/news-and-press-releases,DZA,proxenos,1,2026-11-14T13:29:42Z,,10
+px_ad_mfa_auto,Andorra — Ministeri d'Afers Exteriors - Govern d’Andorra,listing,https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-d-afers-exteriors,AND,proxenos,1,2026-11-14T13:29:20Z,,4
+px_ag_mfa_auto,"Antigua and Barbuda — Ministry of Foreign Affairs, Trade and Barbuda Affairs",listing,https://foreignaffairs.gov.ag/,ATG,proxenos,1,2026-11-14T13:29:20Z,,2
+px_arctic_council_en,Arctic Council — news (EN),listing,https://arctic-council.org/news/,O-ARCTIC,proxenos,1,2026-11-14T13:29:20Z,,25
+px_am_mod_en,"Armenia — Ministry of Defence, news (EN)",listing,https://mil.am/en/news,ARM,proxenos,1,2026-11-14T13:29:20Z,,12
+px_am_mod_hy,"Armenia — Ministry of Defence, news (HY)",listing,https://www.mil.am/hy/news,ARM,proxenos,1,2026-11-14T13:29:20Z,,12
+px_am_mfa_en,"Armenia — Ministry of Foreign Affairs, press releases (EN)",listing,https://www.mfa.am/en/press-releases/,ARM,proxenos,1,2026-11-14T13:29:20Z,,10
+px_am_mfa_hy,"Armenia — Ministry of Foreign Affairs, press releases (HY)",listing,https://www.mfa.am/hy/press-releases/,ARM,proxenos,1,2026-11-14T13:29:20Z,,11
+px_am_president_en,"Armenia — President, press releases (EN)",listing,https://www.president.am/en/press-release/,ARM,proxenos,1,2026-11-14T13:29:20Z,,6
+px_am_president_hy,"Armenia — President, press releases (HY)",listing,https://www.president.am/hy/press-release/,ARM,proxenos,1,2026-11-14T13:29:20Z,,0
+px_am_pm_en,"Armenia — Prime Minister, press releases (EN)",listing,https://www.primeminister.am/en/press-release/,ARM,proxenos,1,2026-11-14T13:29:20Z,,6
+px_am_pm_hy,"Armenia — Prime Minister, press releases (HY)",listing,https://www.primeminister.am/hy/press-release/,ARM,proxenos,1,2026-11-14T13:29:20Z,,7
+px_at_bka_de,"Austria — Federal Chancellery, news of the Federal Government (DE)",listing,https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/{year}.html,AUT,proxenos,1,,2026-11-14T13:29:20Z,0
+px_az_president_pressinfo_az,"Azerbaijan — President, press information (AZ)",listing,https://president.az/az/news/category/press_info,AZE,proxenos,1,2026-11-14T13:29:20Z,,12
+px_az_president_statements_az,"Azerbaijan — President, statements and joint declarations (AZ)",listing,https://president.az/az/documents/category/statements,AZE,proxenos,1,2026-11-14T13:29:20Z,,12
+px_bs_mfa_auto,Bahamas — Ministry of Foreign Affairs The Commonwealth of The Bahamas -,rss,https://mofa.gov.bs/feed/,BHS,proxenos,1,2026-11-14T13:29:42Z,2026-11-13T17:48:53Z,10
+px_bd_ispr_bn,Bangladesh — Inter Services Public Relations (BN),rss,https://ispr.gov.bd/feed/,BGD,proxenos,1,2026-11-14T13:29:21Z,,10
+px_bb_mfa_auto,Barbados — Foreign Affairs and Foreign Trade - Barbados,rss,https://www.foreign.gov.bb/feed/,BRB,proxenos,1,2026-11-14T13:29:21Z,,10
+px_by_mfa_auto,Belarus — News - Ministry of Foreign Affairs of the Republic of Belarus,listing,https://mfa.gov.by/en/press/statements/,BLR,proxenos,1,2026-11-14T13:29:42Z,,1
+px_be_mfa_en,"Belgium — FPS Foreign Affairs, news (EN)",listing,https://diplomatie.belgium.be/en/news,BEL,proxenos,1,2026-11-14T13:29:21Z,,8
+px_bz_mfa_auto,Belize — The Ministry of Foreign Affairs and Foreign Trade | Belize,rss,https://mfa.gov.bz/feed/,BLZ,proxenos,1,2026-11-14T13:29:42Z,,10
+px_bt_mfa_auto,Bhutan — Ministry of Foreign Affairs and External Trade – RGOB,rss,https://www.mfa.gov.bt/feed/,BTN,proxenos,1,2026-11-14T13:29:42Z,,10
+px_bo_mfa_auto,Bolivia — CANCILLERIA :: BOLIVIA,rss,https://cancilleria.gob.bo/mre/feed/,BOL,proxenos,1,2026-11-14T13:29:41Z,,10
+px_ba_vm_bs,Bosnia and Herzegovina — Council of Ministers (BS),listing,https://www.vijeceministara.gov.ba/bs/,BIH,proxenos,1,2026-11-14T13:29:21Z,2026-11-13T17:48:59Z,11
+px_ba_presidency_bs,"Bosnia and Herzegovina — Presidency, press releases (BS)",listing,https://www.predsjednistvobih.ba/saop/Archive.aspx,BIH,proxenos,1,2026-11-14T13:29:21Z,,0
+px_br_mfa_auto,Brazil — Press Releases — Ministério das Relações Exteriores,rss,https://www.gov.br/rss.xml,BRA,proxenos,1,2026-11-14T13:29:42Z,,104
+px_bg_gov_bg,"Bulgaria — Council of Ministers, press centre (BG)",listing,https://www.gov.bg/bg/prestsentar/novini,BGR,proxenos,1,2026-11-14T13:29:21Z,,12
+px_bg_mfa_bg,"Bulgaria — Ministry of Foreign Affairs, news (BG)",rss,https://www.mfa.bg/bg/rss,BGR,proxenos,1,2026-11-14T06:04:39Z,2026-11-14T13:29:21Z,20
+px_bg_president_bg,"Bulgaria — President, news (BG)",listing,https://www.president.bg/,BGR,proxenos,1,2026-11-14T13:29:41Z,,9
+px_bf_mfa_auto,Burkina Faso — Ministère des Affaires Etrangères – Burkina Faso,rss,https://diplomatie.gov.bf/index.php/feed/,BFA,proxenos,1,2026-11-14T13:29:21Z,,10
+px_bi_mfa_auto,Burundi — Accueil - Ministère des Affaires Etrangères du Burundi,rss,https://www.mae.gov.bi/feed/,BDI,proxenos,1,2026-11-14T13:29:41Z,2026-11-14T12:54:29Z,7
+px_caricom_org_auto,CARICOM — caricom.org,listing,https://caricom.org/news-feature-caribbean-community-successfully-keeps-low-covid-19-infection-rates/,O-CARICOM,proxenos,1,2026-11-14T13:29:42Z,,7
+px_cv_mfa_auto,Cabo Verde — Página Oficial do Governo de Cabo Verde,listing,https://www.governo.cv/,CPV,proxenos,1,2026-11-14T13:29:42Z,,6
+px_cm_mfa_auto,Cameroon — diplocam.cm,rss,https://www.diplocam.cm/feed/,CMR,proxenos,1,2026-11-14T13:29:42Z,,5
+px_ca_gac_en,"Canada — Global Affairs Canada news (EN, Atom)",rss,https://api.io.canada.ca/io-server/gc/news/en/v2?dept=departmentofforeignaffairstradeanddevelopment&sort=publishedDate&orderBy=desc&pick=50&format=atom&atomtitle=Global%20Affairs%20Canada,CAN,proxenos,1,2026-11-14T13:29:42Z,,53
+px_cn_mfa_en,China — Ministry of Foreign Affairs spokesperson (EN),listing,https://www.fmprc.gov.cn/eng/xw/fyrbt/,CHN,proxenos,1,2026-11-14T13:29:42Z,,7
+px_cn_mfa_news_zh,"China — Ministry of Foreign Affairs, major news (ZH)",listing,https://www.fmprc.gov.cn/zyxw/index.shtml,CHN,proxenos,1,2026-11-14T13:29:42Z,,27
+px_cn_mfa_briefings_zh,"China — Ministry of Foreign Affairs, regular press conferences (ZH)",listing,https://www.fmprc.gov.cn/fyrbt_673021/jzhsl_673025/index.shtml,CHN,proxenos,1,2026-11-14T13:29:42Z,,25
+px_cn_mfa_spokesperson_zh,"China — Ministry of Foreign Affairs, spokesperson statements (ZH)",listing,https://www.fmprc.gov.cn/fyrbt_673021/dhdw_673027/index.shtml,CHN,proxenos,1,2026-11-14T13:29:42Z,,25
+px_cn_tao_pressconf_zh,"China — Taiwan Affairs Office of the State Council, press conferences (ZH)",listing,https://www.gwytb.gov.cn/xwdt/xwfb/xwfbh/index.htm,CHN,proxenos,1,2026-11-14T13:29:42Z,,0
+px_cn_tao_statements_zh,"China — Taiwan Affairs Office of the State Council, spokesperson statements (ZH)",listing,https://www.gwytb.gov.cn/xwdt/xwfb/wyly/index.htm,CHN,proxenos,1,2026-11-14T13:29:42Z,,0
+px_km_mfa_auto,Comoros — beit-salam.km,listing,https://www.beit-salam.km/,COM,proxenos,1,2026-11-14T13:29:46Z,,4
+px_hr_mod_hr,"Croatia — Ministry of Defence, news (HR)",rss,https://www.morh.hr/feed/,HRV,proxenos,1,2026-11-14T13:29:42Z,,20
+px_hr_mfa_auto,Croatia — Ministry of Foreign Affairs of the Republic of Croatia - Homepage,listing,https://mvep.gov.hr/en,HRV,proxenos,1,2026-11-14T13:29:42Z,,4
+px_hr_mfa_hr,"Croatia — Ministry of Foreign and European Affairs, news (HR)",listing,https://mvep.gov.hr/vijesti/8,HRV,proxenos,1,2026-11-14T13:29:42Z,,18
+px_cu_granma_en,"Cuba — Granma, official organ of the Communist Party of Cuba (EN)",rss,https://en.granma.cu/feed/,CUB,proxenos,1,2026-11-14T13:29:42Z,,67
+px_cz_mfa_auto,Czechia — Press Releases | Ministry of Foreign Affairs of the Czech Republic,listing,https://mzv.gov.cz/jnp/en/issues_and_press/press_releases/index.mobi,CZE,proxenos,1,2026-11-14T13:29:42Z,,10
+px_cd_mfa_auto,Democratic Republic of the Congo — diplomatie.gouv.cd,rss,https://diplomatie.gouv.cd/feed/,COD,proxenos,1,2026-11-14T13:29:42Z,,10
+px_dk_mfa_auto,"Denmark — Aftale mellem Grønland, Danmark og USA - Statsministeriet",listing,https://stm.dk/presse/pressemeddelelser/2026/aftale-mellem-groenland-danmark-og-usa/,DNK,proxenos,1,2026-11-14T13:29:42Z,,1
+px_do_mfa_auto,Dominican Republic — Inicio - MIREX | Ministerio de Relaciones Exteriores,rss,https://mirex.gob.do/feed/,DOM,proxenos,1,2026-11-14T13:29:42Z,,10
+px_eccas_org_auto,ECCAS — Accueil - Site Web Officiel de la CEEAC,rss,https://www.ceeac-eccas.org/feed/,O-ECCAS,proxenos,1,2026-11-14T13:29:42Z,,10
+px_ecowas_org_auto,ECOWAS — Santo Antão,rss,https://www.ecowas.int/feed/,O-ECOWAS,proxenos,1,2026-11-14T13:29:42Z,,24
+px_eu_eeas_press,EU — European External Action Service press material,listing,https://www.eeas.europa.eu/eeas/press-material_en,Q458,proxenos,1,2026-11-14T13:29:42Z,,1
+px_eac_org_auto,East African Community — Press Releases,rss,https://www.eac.int/press-releases?format=feed&type=rss,O-EAC,proxenos,1,2026-11-14T13:29:42Z,,28
+px_gq_mfa_auto,Equatorial Guinea — Página Oficial del Gobierno de la República de Guinea Ecuatorial,listing,https://www.guineaecuatorialpress.com/,GNQ,proxenos,1,2026-11-14T13:29:42Z,,27
+px_er_shabait_en,Eritrea — Ministry of Information (EN),rss,https://shabait.com/feed/,ERI,proxenos,1,2026-11-14T13:29:42Z,,12
+px_ee_mfa_auto,Estonia — Estonian Ministry of Foreign Affairs: Homepage | Välisministeerium,listing,https://vm.ee/en,EST,proxenos,1,2026-11-14T13:29:42Z,,4
+px_et_mfa_blog_en,"Ethiopia — Ministry of Foreign Affairs, official blog (EN)",rss,https://mfaethiopia.blog/feed/,ETH,proxenos,1,2026-11-14T13:29:42Z,,10
+px_fj_mfa_auto2,Fiji — Fiji Government |,rss,https://www.fiji.gov.fj/feed/,FJI,proxenos,1,2026-11-14T13:29:42Z,,10
+px_fj_mfa_auto,Fiji — Home - Ministry of Foreign Affairs,rss,https://www.foreignaffairs.gov.fj/feed/,FJI,proxenos,1,2026-11-14T13:29:42Z,,10
+px_fi_mfa_en,Finland — Ministry for Foreign Affairs (EN),rss,https://um.fi/o/rss?dctype=asset&lang=en_US&aid=gc654PySnjTX&plid=709011,FIN,proxenos,1,2026-11-14T13:29:42Z,,20
+px_fr_mission_un_fr,France — Permanent Mission to the United Nations (FR),listing,https://onu.diplomatie.gouv.fr/fr,FRA,proxenos,1,2026-11-14T13:29:42Z,,26
+px_fr_rp_otan_fr,France — Permanent Representation to NATO (FR),listing,https://otan.diplomatie.gouv.fr/fr,FRA,proxenos,1,2026-11-14T13:29:42Z,,10
+px_fr_rp_ue_fr,France — Permanent Representation to the European Union (FR),listing,https://ue.diplomatie.gouv.fr/,FRA,proxenos,1,2026-11-14T13:29:42Z,,8
+px_fr_rp_osce_fr,France — Permanent Representation to the OSCE (FR),listing,https://osce.diplomatie.gouv.fr/,FRA,proxenos,1,2026-11-14T13:29:42Z,,8
+px_fr_elysee_fr,France — Presidency of the Republic (Élysée) (FR),rss,https://www.elysee.fr/feed/,FRA,proxenos,1,2026-11-14T13:29:42Z,,32
+px_gcc_sg_en,GCC Secretariat General (EN),listing,https://gcc-sg.org/en/MediaCenter/News/Pages/default.aspx,Q170152,proxenos,1,2026-11-14T13:29:42Z,,0
+px_ge_mfa_en,Georgia — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gov.ge/en/news,GEO,proxenos,1,2026-11-14T13:29:42Z,,12
+px_ge_mfa_ka,"Georgia — Ministry of Foreign Affairs, news (KA)",listing,https://mfa.gov.ge/ka/news,GEO,proxenos,1,2026-11-14T13:29:42Z,,12
+px_de_ffo_press_en,"Germany — Federal Foreign Office, press releases and speeches (EN)",rss,https://www.auswaertiges-amt.de/static/includes/rss_en/RSS_Pressemitteilungen_Reden.xml,DEU,proxenos,1,2026-11-13T17:48:56Z,2026-11-14T13:29:42Z,20
+px_gh_mfa_auto,Ghana — Ministry Of Foreign Affairs – Republic of Ghana,rss,https://mfa.gov.gh/index.php/feed/,GHA,proxenos,1,2026-11-14T13:29:42Z,,10
+px_gn_mfa_auto,Guinea — mae.gov.gn,listing,https://mae.gov.gn/,GIN,proxenos,1,2026-11-14T13:29:42Z,2026-11-13T20:48:07Z,4
+px_gy_mfa_auto,Guyana — Press Release | Ministry of Foreign Affairs,rss,https://www.minfor.gov.gy/taxonomy/term/21/feed,GUY,proxenos,1,2026-11-14T13:29:42Z,,7
+px_gr_mfa_en,Hellenic Republic — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gr/en/category/current-affairs/,GRC,proxenos,1,2026-11-14T13:29:42Z,,11
+px_igad_en,IGAD — Intergovernmental Authority on Development (EN),rss,https://igad.int/feed/,O-IGAD,proxenos,1,2026-11-14T13:29:42Z,,12
+px_is_gov_en,"Iceland — Government of Iceland, news (EN)",listing,https://www.government.is/news/,ISL,proxenos,1,2026-11-14T13:29:46Z,,25
+px_in_mea_en,"India — Ministry of External Affairs, press releases (EN)",listing,https://www.mea.gov.in/press-releases,IND,proxenos,1,2026-11-14T13:29:42Z,,24
+px_id_setkab_id,"Indonesia — Cabinet Secretariat, news (ID)",rss,https://setkab.go.id/feed/,IDN,proxenos,1,,2026-11-14T13:29:42Z,0
+px_id_kemhan_id,"Indonesia — Ministry of Defence, news (ID)",rss,https://www.kemhan.go.id/feed,IDN,proxenos,1,2026-11-14T13:29:42Z,,13
+px_id_setneg_id,"Indonesia — Ministry of State Secretariat, news (ID)",listing,https://www.setneg.go.id/,IDN,proxenos,1,2026-11-14T13:29:42Z,,27
+px_iq_mofa_en,Iraq — Ministry of Foreign Affairs (EN),listing,https://mofa.gov.iq/en/,IRQ,proxenos,1,2026-11-14T13:29:42Z,,6
+px_ir_mfa_fa,Islamic Republic of Iran — Ministry of Foreign Affairs (FA),listing,https://mfa.ir/,IRN,proxenos,1,,2026-11-14T13:29:46Z,0
+px_il_mfa_embassies,"Israel — MFA embassy in Athens, news (EN)",listing,https://embassies.gov.il/greece/en/news,ISR,proxenos,1,2026-11-14T13:29:42Z,,5
+px_il_embassy_usa,"Israel — MFA embassy in Washington, news (EN)",listing,https://embassies.gov.il/usa/en/news,ISR,proxenos,1,2026-11-14T13:29:42Z,,5
+px_it_mfa_en,"Italy — Ministry of Foreign Affairs (Farnesina), press releases (EN)",rss,https://www.esteri.it/en/feed/,ITA,proxenos,1,2026-11-14T06:06:10Z,2026-11-14T13:29:46Z,10
+px_jm_mfa_auto,Jamaica — MFAFT Jamaica,listing,https://mfaft.gov.jm/,JAM,proxenos,1,2026-11-14T13:29:46Z,,0
+px_jp_mod_ja,"Japan — Ministry of Defense, press releases (JA)",rss,https://www.mod.go.jp/j/rss/news.xml,JPN,proxenos,1,2026-11-14T13:29:46Z,,102
+px_jp_kantei_ja,"Japan — Prime Minister's Office (Kantei), statements and press conferences (JA)",listing,https://www.kantei.go.jp/jp/news/index.html,JPN,proxenos,1,2026-11-14T13:29:46Z,,3
+px_jo_mfa_ar,Jordan — Ministry of Foreign Affairs and Expatriates (AR),listing,https://mfa.gov.jo/News,JOR,proxenos,1,2026-11-14T13:29:46Z,,0
+px_ki_mfa_auto,Kiribati — Ministry of Foreign Affairs & Immigration,rss,https://www.mfa.gov.ki/feed/,KIR,proxenos,1,2026-11-14T13:29:46Z,,2
+px_xk_mfa_sq,Kosovo — Ministry of Foreign Affairs and Diaspora (SQ),rss,https://mfa-ks.net/feed/,XKX,proxenos,1,2026-11-14T13:30:20Z,2026-11-13T20:49:54Z,10
+px_lv_mfa_auto,Latvia — News | Ārlietu ministrija,listing,https://www.mfa.gov.lv/en/articles,LVA,proxenos,1,2026-11-14T13:29:46Z,2026-11-13T21:12:20Z,15
+px_lb_army_en,"Lebanon — Lebanese Army Command, news (EN)",rss,https://www.lebarmy.gov.lb/en/rss.xml,LBN,proxenos,1,2026-11-14T13:29:46Z,,10
+px_lb_presidency_ar,"Lebanon — Presidency of the Republic, news (AR)",listing,https://www.presidency.gov.lb/,LBN,proxenos,1,2026-11-14T13:29:46Z,,23
+px_ls_mfa_auto,Lesotho — Home - Government of Lesotho,rss,https://www.gov.ls/feed/,LSO,proxenos,1,2026-11-14T13:29:46Z,2026-11-13T17:50:00Z,10
+px_ly_mfa_auto,Libya — وزارة الخارجية والتعاون الدولي | ليبيا,listing,https://foreign.gov.ly/MOFA/,LBY,proxenos,1,2026-11-14T13:29:46Z,,8
+px_li_mfa_auto,Liechtenstein — Regierung des Fürstentums Liechtenstein - Startseite,listing,https://www.regierung.li/,LIE,proxenos,1,2026-11-14T13:29:46Z,,5
+px_lu_mae_fr,"Luxembourg — Ministry of Foreign and European Affairs, news (RSS) (FR)",rss,https://mae.gouvernement.lu/fr/actualites.rss,LUX,proxenos,1,2026-11-14T13:29:46Z,,50
+px_mg_mfa_auto,Madagascar — Accueil,listing,https://www.diplomatie.gov.mg/,MDG,proxenos,1,2026-11-14T13:29:46Z,,11
+px_mh_mfa_auto,Marshall Islands — แทงบอล กับ UFABET เว็บตรงมั่นคง เล่นง่าย จ่ายจริงทุกบิล,rss,https://rmigovernment.org/feed/,MHL,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mu_mfa_auto,Mauritius — Home,listing,https://foreign.govmu.org/Pages/default.aspx,MUS,proxenos,1,2026-11-14T13:29:46Z,,7
+px_mx_mfa_auto,Mexico — gob.mx,listing,https://www.gob.mx/sre/es/archivo/prensa,MEX,proxenos,1,2026-11-14T13:29:46Z,,11
+px_fm_mfa_auto,Micronesia — FSM Government – FSM Government,rss,https://gov.fm/feed/,FSM,proxenos,1,2026-11-14T13:29:42Z,,10
+px_md_mfa_en,Moldova — Ministry of Foreign Affairs (EN),rss,https://mfa.gov.md/en/press/feed.xml,MDA,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mc_mfa_auto,Monaco — Portail Officiel du Gouvernement Princier de Monaco,rss,https://www.gouv.mc/rss/feed/portail-gouv-actualites-fr,MCO,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mz_mfa_auto,Mozambique — MINEC – Ministério dos Negócios Estrangeiros e Cooperação,rss,https://minec.gov.mz/feed/,MOZ,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mm_mfa_auto,Myanmar — Ministry of Foreign Affairs – Republic of The Union of Myanmar,rss,https://www.mofa.gov.mm/feed/,MMR,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mm_moi_my,"Myanmar — Ministry of Information, news (MY)",listing,https://www.moi.gov.mm/,MMR,proxenos,1,2026-11-14T13:29:46Z,2026-11-14T12:59:29Z,19
+px_nato_news,NATO — news,listing,https://www.nato.int/en/news-and-events/articles/news,Q7184,proxenos,1,2026-11-14T13:29:46Z,,1
+px_nl_mfa_gov_en,"Netherlands — Ministry of Foreign Affairs, news (government.nl) (EN)",listing,https://www.government.nl/ministries/ministry-of-foreign-affairs,NLD,proxenos,1,2026-11-14T13:29:47Z,,6
+px_ng_mfa_auto,Nigeria — Latest News – MFA Press Center,rss,https://foreignaffairs.gov.ng/news/feed/,NGA,proxenos,1,2026-11-14T13:29:47Z,,5
+px_mk_mfa_en,North Macedonia — Ministry of Foreign Affairs and Foreign Trade (EN),listing,https://mfa.gov.mk/en-GB/odnosi-so-javnost/soopstenija,MKD,proxenos,1,2026-11-14T13:29:46Z,,14
+px_mk_president_en,"North Macedonia — President, news (EN)",rss,https://pretsedatel.mk/en/feed/,MKD,proxenos,1,2026-11-14T13:29:46Z,,10
+px_mk_president_mk,"North Macedonia — President, news (MK)",rss,https://pretsedatel.mk/feed/,MKD,proxenos,1,2026-11-14T13:29:46Z,,10
+px_no_mfa_en,Norway — Ministry of Foreign Affairs (EN),rss,https://www.regjeringen.no/en/rss/Rss/2581966/?owner=833,NOR,proxenos,1,2026-11-14T13:29:47Z,,76
+px_osce_stories_en,OSCE — news and stories (EN),listing,https://www.osce.org/,O-OSCE,proxenos,1,2026-11-14T13:29:47Z,,11
+px_om_mfa_en,Oman — Foreign Ministry (EN),listing,https://www.fm.gov.om/en/news/news/,OMN,proxenos,1,2026-11-14T13:29:47Z,,24
+px_om_mfa_statements,"Oman — Foreign Ministry, statements (EN)",listing,https://www.fm.gov.om/en/news/statements/,OMN,proxenos,1,2026-11-14T13:29:47Z,,15
+px_oic_org_auto,Organisation of Islamic Cooperation — Organisation of Islamic Cooperation — OIC,listing,https://www.oic-oci.org/en,O-OIC,proxenos,1,2026-11-14T13:29:47Z,,25
+px_pif_org_auto,Pacific Islands Forum — Home page | Pacific Islands Forum Secretariat,rss,https://forumsec.org/rss.xml,O-PIF,proxenos,1,2026-11-14T13:30:06Z,,11
+px_ps_wafa_en,"Palestine — WAFA, official news agency (EN)",listing,https://english.wafa.ps/,PSE,proxenos,1,2026-11-14T13:30:06Z,,43
+px_pa_mfa_auto,Panama — Ministerio de Relaciones exteriores,listing,https://mire.gob.pa/,PAN,proxenos,1,2026-11-14T13:29:47Z,,17
+px_pg_mfa_auto,Papua New Guinea — Department of Foreign Affairs (DFA) of Papua New Guinea (PNG),rss,https://www.dfa.gov.pg/feed/,PNG,proxenos,1,2026-11-14T13:30:06Z,,10
+px_pe_mfa_auto,Peru — gob.pe,listing,https://www.gob.pe/rree,PER,proxenos,1,2026-11-14T13:30:06Z,,23
+px_pl_mfa_auto,Poland — Portal Gov.pl,listing,https://www.gov.pl/,POL,proxenos,1,2026-11-14T13:30:06Z,2026-11-14T12:52:15Z,11
+px_pt_mfa_en,"Portugal — Ministry of Foreign Affairs, press releases (EN)",listing,https://portaldiplomatico.mne.gov.pt/en/communication-and-media/press-releases,PRT,proxenos,1,2026-11-14T13:30:06Z,,5
+px_qa_mofa_en,Qatar — Ministry of Foreign Affairs (EN),listing,https://mofa.gov.qa/en/latest-articles/statements,QAT,proxenos,1,2026-11-14T13:30:06Z,,5
+px_kr_president_ko,"Republic of Korea — Office of the President, briefings (KO)",listing,https://www.president.go.kr/,KOR,proxenos,1,2026-11-14T13:29:46Z,,5
+px_tr_mfa_rss,Republic of Türkiye — MFA press releases (official RSS),rss,https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4,TUR,proxenos,1,2026-11-14T13:30:07Z,,199
+px_tr_mfa_en,Republic of Türkiye — Ministry of Foreign Affairs (EN),listing,https://www.mfa.gov.tr/sub.en.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4,TUR,proxenos,1,2026-11-14T13:30:07Z,,0
+px_tr_mfa_tr,"Republic of Türkiye — Ministry of Foreign Affairs, statements (TR)",listing,https://www.mfa.gov.tr/aciklamalar-genel.tr.mfa,TUR,proxenos,1,2026-11-14T13:30:07Z,,0
+px_tr_mfa_rss_tr,"Republic of Türkiye — Ministry of Foreign Affairs, statements RSS (TR)",rss,https://www.mfa.gov.tr/tr.rss.mfa?3fc6582e-a37b-40d1-847a-6914dc12fb60,TUR,proxenos,1,2026-11-14T13:30:07Z,,176
+px_ro_gov_en,"Romania — Government, news (EN)",listing,https://gov.ro/en/news,ROU,proxenos,1,2026-11-14T13:30:06Z,,5
+px_ro_mapn_en,"Romania — Ministry of National Defence, news (EN)",listing,https://english.mapn.ro/,ROU,proxenos,1,2026-11-14T13:30:06Z,,3
+px_ru_mission_un_ru,"Russia — Permanent Mission to the UN, news (RU)",listing,https://russiaun.ru/news/list/lang/ru,RUS,proxenos,1,2026-11-14T13:30:06Z,,18
+px_ru_mission_un,"Russia — Permanent Mission to the UN, statements (EN)",listing,https://russiaun.ru/news/list/lang/en,RUS,proxenos,1,2026-11-14T13:30:06Z,,18
+px_rw_mfa_auto,Rwanda — Home,listing,https://www.minaffet.gov.rw/,RWA,proxenos,1,2026-11-14T13:30:06Z,,3
+px_sadc_org_auto,SADC — Latest News | SADC,listing,https://www.sadc.int/latest-news,O-SADC,proxenos,1,2026-11-14T13:30:06Z,,15
+px_kn_mfa_auto,Saint Kitts and Nevis — Homepage - SKNIS,rss,https://www.sknis.gov.kn/feed/,KNA,proxenos,1,2026-11-14T13:29:46Z,,13
+px_lc_mfa_auto,Saint Lucia — Government of Saint Lucia - top 20 News articles,rss,https://www.govt.lc/news/rss,LCA,proxenos,1,2026-11-14T13:29:46Z,2026-11-14T12:16:46Z,11
+px_sn_mfa_auto,Senegal — | Ministère de l'Intégration Africaine et des Affaires Etrangères,listing,https://www.diplomatie.gouv.sn/,SEN,proxenos,1,2026-11-14T13:30:07Z,2026-11-14T07:34:53Z,9
+px_rs_gov_en,"Serbia — Government, news (EN)",listing,https://www.srbija.gov.rs/en,SRB,proxenos,1,2026-11-14T13:30:06Z,,10
+px_rs_gov_sr,"Serbia — Government, news (SR)",rss,https://www.srbija.gov.rs/rss/?change_lang=cr,SRB,proxenos,1,2026-11-14T13:30:06Z,,23
+px_rs_mod_sr,"Serbia — Ministry of Defence, news (SR)",rss,https://www.mod.gov.rs/rss.php?cir,SRB,proxenos,1,2026-11-14T13:30:06Z,,20
+px_rs_mfa_sr,"Serbia — Ministry of Foreign Affairs, media (SR)",rss,https://www.mfa.gov.rs/rss.xml,SRB,proxenos,1,2026-11-14T13:30:06Z,,24
+px_rs_mfa_en,"Serbia — Ministry of Foreign Affairs, news (EN)",listing,https://www.mfa.gov.rs/en/press-service/news,SRB,proxenos,1,2026-11-14T13:30:06Z,,12
+px_rs_president_sr,"Serbia — President, press centre (SR)",listing,https://www.predsednik.rs/,SRB,proxenos,1,2026-11-14T13:30:06Z,,13
+px_sc_mfa_auto,Seychelles — Home - Ministry of Foreign Affairs and the Diaspora,listing,https://mfa.gov.sc/,SYC,proxenos,1,2026-11-14T13:30:06Z,2026-11-13T18:40:35Z,7
+px_sco_org_auto,Shanghai Cooperation Organisation — The Shanghai cooperation organisation,listing,https://eng.sectsco.org/,O-SCO,proxenos,1,2026-11-14T13:30:06Z,,7
+px_sg_mfa_auto,"Singapore — Press Statements, Transcripts & Photos | Ministry of Foreign Affairs",rss,https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/rss.xml,SGP,proxenos,1,2026-11-14T13:30:07Z,,201
+px_si_gov_sl,"Slovenia — Government, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=936,SVN,proxenos,1,2026-11-14T13:30:07Z,,100
+px_si_mod_sl,"Slovenia — Ministry of Defence, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=30,SVN,proxenos,1,2026-11-14T13:30:07Z,,100
+px_si_mfa_sl,"Slovenia — Ministry of Foreign and European Affairs, news (SL)",rss,https://www.gov.si/novice/rss/?orgID%5B0%5D=3745,SVN,proxenos,1,2026-11-14T13:30:07Z,,101
+px_si_mfa_auto,Slovenia — News | GOV.SI,rss,https://www.gov.si/en/news/rss,SVN,proxenos,1,2026-11-14T13:30:07Z,,102
+px_so_mfa_en,Somalia — Ministry of Foreign Affairs and International Cooperation (EN),rss,https://web.mfa.gov.so/category/press-release/feed/,SOM,proxenos,1,2026-11-14T13:30:07Z,,10
+px_za_mfa_auto,South Africa — Media Statement Archives - DIRCO,listing,https://dirco.gov.za/media-statements/,ZAF,proxenos,1,2026-11-14T13:30:20Z,,2
+px_es_mfa_en,"Spain — Ministry of Foreign Affairs, EU and Cooperation, press releases (EN)",listing,https://www.exteriores.gob.es/en/Comunicacion/NotasPrensa/Paginas/index.aspx,ESP,proxenos,1,2026-11-14T13:29:42Z,,0
+px_lk_mfa_auto,"Sri Lanka — Ministry of Foreign Affairs, Foreign Employment & Tourism",rss,https://www.mfa.gov.lk/rss.xml,LKA,proxenos,1,2026-11-14T13:29:46Z,,10
+px_il_mod_he,"State of Israel — Ministry of Defense, news (HE)",listing,https://www.mod.gov.il/כתבות-ומבזקים/חדשות-משרד-הביטחון,ISR,proxenos,1,2026-11-14T13:29:42Z,2026-11-13T17:49:32Z,4
+px_il_president_he,"State of Israel — Office of the President, news (HE)",rss,https://www.president.gov.il/feed/,ISR,proxenos,1,2026-11-14T13:29:42Z,,0
+px_sd_embassy_us_en,"Sudan — Embassy in Washington, press releases (EN)",rss,https://sudanembassy.org/category/press-release/feed/,SDN,proxenos,1,2026-11-14T13:30:07Z,,1
+px_sd_gov_ar,"Sudan — Government of the Republic of the Sudan, news (AR)",rss,https://sudan.gov.sd/feed/,SDN,proxenos,1,2026-11-14T13:30:07Z,,11
+px_sr_mfa_auto,Suriname — Home,rss,https://gov.sr/feed/,SUR,proxenos,1,2026-11-14T13:30:07Z,,17
+px_ch_fdfa_news_en,"Switzerland — Federal Department of Foreign Affairs, news overview (EN)",listing,https://www.eda.admin.ch/en/news-overview,CHE,proxenos,1,2026-11-14T13:29:42Z,,25
+px_sy_sana_en,"Syria — SANA, official news agency (EN)",rss,https://sana.sy/en/feed/,SYR,proxenos,1,2026-11-14T13:30:07Z,,10
+px_st_mfa_auto,São Tomé and Príncipe — Portal do Cidadão - São Tomé e Príncipe,listing,https://gov.st/,STP,proxenos,1,2026-11-14T13:30:07Z,2026-11-14T07:45:23Z,6
+px_th_mfa_th,"Thailand — Ministry of Foreign Affairs, press releases (TH)",listing,https://www.mfa.go.th/th/page/%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%97%E0%B8%A8?menu=5d5bd3cb15e39c306002a9ad,THA,proxenos,1,2026-11-14T13:30:07Z,,11
+px_th_mfa_auto,Thailand — Press Releases -,listing,https://www.mfa.go.th/en/page/press-releases?menu=5d5bd3cb15e39c306002a9b0,THA,proxenos,1,2026-11-14T13:30:07Z,,11
+px_tt_mfa_auto,Trinidad and Tobago — Ministry of Foreign and CARICOM Affairs | Welcome,rss,https://foreign.gov.tt/feed/,TTO,proxenos,1,2026-11-14T13:30:07Z,,59
+px_tm_mfa_auto,Turkmenistan — News,listing,https://www.mfa.gov.tm/en/news,TKM,proxenos,1,2026-11-14T13:30:07Z,,15
+px_tr_iletisim_tr,"Türkiye — Directorate of Communications, news (TR)",listing,https://www.iletisim.gov.tr/turkce/haberler,TUR,proxenos,1,2026-11-14T13:30:07Z,2026-11-13T21:25:30Z,11
+px_uk_fcdo_news,UK FCDO — news and communications (GOV.UK Atom),rss,https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=foreign-commonwealth-development-office,GBR,proxenos,1,2026-11-14T13:30:07Z,,5
+px_ug_mfa_auto,Uganda — MoFA | The Republic of Uganda,rss,https://www.mofa.go.ug/rss.xml,UGA,proxenos,1,2026-11-14T13:30:07Z,,10
+px_ua_mission_un_en,"Ukraine — Permanent Mission to the United Nations, press centre (EN)",listing,https://ukraineun.org/en/press-center/,UKR,proxenos,1,2026-11-14T13:30:07Z,,9
+px_ae_mofa_en,United Arab Emirates — Ministry of Foreign Affairs (EN),listing,https://www.mofa.gov.ae/en/mediahub/news,ARE,proxenos,1,2026-11-14T13:29:20Z,,22
+px_un_sc_press,"United Nations — press releases (RSS, all bodies; Security Council items filtered by content)",rss,https://press.un.org/feed/,Q37470,proxenos,1,2026-11-14T13:30:07Z,,12
+px_us_ustr_en,"United States — Office of the Trade Representative, press office (EN)",rss,https://ustr.gov/rss.xml,USA,proxenos,1,2026-11-14T13:30:07Z,,10
+px_us_wh_actions_en,"United States — The White House, presidential actions (EN)",rss,https://www.whitehouse.gov/presidential-actions/feed/,USA,proxenos,1,2026-11-14T13:30:07Z,,25
+px_uy_mfa_auto,Uruguay — Noticias | Ministerio de Relaciones Exteriores,listing,https://www.gub.uy/ministerio-relaciones-exteriores/comunicacion/noticias,URY,proxenos,1,2026-11-14T13:30:07Z,,10
+px_vn_mofa_vi,"Viet Nam — Ministry of Foreign Affairs, news and spokesperson (VI)",listing,https://mofa.gov.vn/,VNM,proxenos,1,2026-11-14T13:30:20Z,,15
+px_vn_mofa_spokesperson_vi,"Viet Nam — Ministry of Foreign Affairs, spokesperson (VI)",listing,https://mofa.gov.vn/nguoi-phat-ngon,VNM,proxenos,1,2026-11-14T13:30:18Z,,20
+px_ye_saba_en,"Yemen — SABA, government news agency (EN)",rss,https://www.sabanew.net/rss.php?lang=en,YEM,proxenos,1,2026-11-14T13:30:20Z,,20
+px_gr_mfa_el,Υπουργείο Εξωτερικών (EL),listing,https://www.mfa.gr/category/epikairotita/,GRC,proxenos,1,2026-11-14T13:29:42Z,,15
+px_eg_mfa_ar,"مصر — وزارة الخارجية، بيانات (Egypt MFA statements, AR)",listing,https://www.mfa.gov.eg/ar/Ministers/StatementsAndWordsOfTheMinisterOfForeignAffairs,EGY,proxenos,1,2026-11-14T13:29:42Z,,22
 sec_amd,AMD - earnings releases and outlook (SEC filings),sec,https://data.sec.gov/submissions/CIK0000002488.json,USA,core,0,,,0
 sec_asml,ASML - earnings releases and outlook (SEC filings),sec,https://data.sec.gov/submissions/CIK0000937966.json,NLD,core,0,,,0
 sec_at_t,AT&T - earnings releases and outlook (SEC filings),sec,https://data.sec.gov/submissions/CIK0000732717.json,USA,core,0,,,0
