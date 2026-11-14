@@ -33,6 +33,10 @@ details.how summary{cursor:pointer;color:var(--moon);font-weight:600}.verdict{fo
 .who .card{display:flex;flex-direction:column;margin:0}.who .card>b{font-size:20px;margin:6px 0 2px}.who .card p{flex:1;margin:8px 0}
 .who .role{min-height:2.7em;display:block;font:600 11px system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--moon)}
 .who .does{border-top:1px solid var(--line);padding-top:8px;font:13px/1.5 system-ui,sans-serif;color:var(--mute)}.who .does i{display:block;font-style:normal;font-weight:600;color:inherit;opacity:.8;text-transform:uppercase;font-size:11px;letter-spacing:.06em}
+.boardsec{margin:26px 0 8px}.tbl-x{overflow-x:auto}table.board{font:13.5px system-ui,sans-serif;min-width:980px}
+table.board th{font-size:12px;vertical-align:bottom}table.board td{white-space:nowrap}table.board td:first-child{white-space:normal;font-weight:600}
+table.board td.ok{color:#5fb98a}table.board td.mid{color:#e0a84a}table.board td.bad{color:#e06a6a}table.board tr.total td{border-top:2px solid var(--moon);font-weight:700}
+.hb{height:6px;background:var(--line);border-radius:3px;margin-top:3px;min-width:70px}.hb i{display:block;height:6px;border-radius:3px;background:#5fb98a}
 table.roles td:first-child{width:38%}table.roles td{vertical-align:top}.supp{opacity:.9}
 .chart svg{max-width:100%;height:auto}
 .chart text{font:12px system-ui,sans-serif;fill:#9aa6bf}.chart .lg{fill:#e8ecf4}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
