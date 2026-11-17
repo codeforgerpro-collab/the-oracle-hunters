@@ -4,7 +4,7 @@
 
 ## Facts
 
-- Statements on record: 79,855 from 2,424 speakers, collected from 334 sources (85,903 documents read).
+- Statements on record: 79,857 from 2,425 speakers, collected from 334 sources (85,924 documents read).
 - Checkable statements now due: 16,507; checked so far: 497. Statements too vague to check are kept and labelled, never scored.
 - Checking rules version 4: an outcome is decided only against an official figure (IMF, World Bank, OECD, BIS, Eurostat, FRED and national statistics) under published rules; doubtful cases are left open, not guessed.
 - Every checked statement has its own page with the verdict first, the quote, the rule applied and the proof: https://codeforgerpro-collab.github.io/the-oracle-hunters/claim/<id>.html (all listed in the sitemap).
