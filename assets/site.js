@@ -5,7 +5,7 @@ const root=document.documentElement;let th=root.dataset.theme||'dark';
 const tb=$('#thm');if(tb)tb.onclick=()=>{th=th=='dark'?'light':'dark';root.dataset.theme=th;try{localStorage.setItem('oh-theme',th)}catch(e){}};
 const bg=$('#burger');if(bg)bg.onclick=()=>$('header nav').classList.toggle('open');
 const here=location.pathname.split('/').pop()||'index.html';
-document.querySelectorAll('header nav a').forEach(a=>{if(a.getAttribute('href').split('/').pop()==here)a.classList.add('on')});
+document.querySelectorAll('header nav a').forEach(a=>{if((a.getAttribute('href').split('/').pop()||'index.html')==here)a.classList.add('on')});
 document.addEventListener('click',ev=>{const h=ev.target.closest('th');if(!h)return;const tr=h.parentNode,t=tr.closest('table');if(!t||tr!==t.rows[0])return;
  const i=[...tr.children].indexOf(h),rows=[...t.rows].slice(1);const dir=h.dataset.dir=h.dataset.dir=='a'?'d':'a';
  const val=r=>{const x=((r.cells[i]||{}).innerText||'').trim();const n=parseFloat(x.replace(/[,%]/g,''));return isNaN(n)||/^[A-Za-z]/.test(x)?x.toLowerCase():n};
