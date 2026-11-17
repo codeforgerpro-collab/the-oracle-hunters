@@ -1,7 +1,7 @@
 (function(){
 const sc=document.currentScript,up=(sc&&sc.dataset.up)||'';const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
-const root=document.documentElement;let th=root.dataset.theme||'dark';
+const root=document.documentElement;let th=root.dataset.theme||'light';
 const tb=$('#thm');if(tb)tb.onclick=()=>{th=th=='dark'?'light':'dark';root.dataset.theme=th;try{localStorage.setItem('oh-theme',th)}catch(e){}};
 const bg=$('#burger');if(bg)bg.onclick=()=>$('header nav').classList.toggle('open');
 const here=location.pathname.split('/').pop()||'index.html';
@@ -22,4 +22,25 @@ if(q){q.addEventListener('input',async()=>{const v=q.value.trim().toLowerCase();
  box.innerHTML=r.map(x=>`<a href="${up}speakers/${encodeURIComponent(x.s)}.html"><b>${esc(x.n)}</b><span>${esc(x.k=='institution'?'Institution':x.i)} · ${x.f} statements</span></a>`).join('')+`<a href="${up}ledger.html"><span>Search every statement in the ledger →</span></a>`;box.style.display='block'});
  document.addEventListener('click',e=>{if(!e.target.closest('.gs'))box.style.display='none'});}
 const tt=$('#totop');if(tt){window.addEventListener('scroll',()=>tt.classList.toggle('show',window.scrollY>600));tt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'})}
+})();
+(function(){
+const bg=document.getElementById('burger'),nv=document.getElementById('mainnav');
+if(bg&&nv){bg.setAttribute('aria-expanded','false');bg.setAttribute('aria-controls','mainnav');bg.addEventListener('click',()=>bg.setAttribute('aria-expanded',nv.classList.contains('open')?'true':'false'))}
+const f=document.getElementById('drf');if(!f)return;
+const msg=document.getElementById('drmsg'),L=f.dataset;
+const show=(c,h)=>{msg.className='drmsg '+c;msg.innerHTML=h;msg.focus()};
+f.addEventListener('submit',async ev=>{ev.preventDefault();
+ if(f.elements.website&&f.elements.website.value)return;
+ if(!f.checkValidity()){f.reportValidity();return}
+ if(!f.querySelector('input[name=datasets]:checked')){show('err',L.needmsg);return}
+ const d=new FormData(f),o={};d.forEach((v,k)=>{if(k=='website')return;o[k]=(k in o)?[].concat(o[k],v):(k=='datasets'?[v]:v)});
+ const t=new Date(),p=n=>String(n).padStart(2,'0'),rnd=Array.from(crypto.getRandomValues(new Uint8Array(4)),b=>'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[b%32]).join('');
+ const ref='OH-'+t.getUTCFullYear()+p(t.getUTCMonth()+1)+p(t.getUTCDate())+'-'+rnd;o.reference=ref;o.sent_utc=t.toISOString();o.lang=document.documentElement.lang;
+ const R=s=>s.replace('{ref}','<span class="ref">'+ref+'</span>');
+ if(L.endpoint){try{const r=await fetch(L.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)});
+   if(!r.ok)throw new Error(r.status);show('ok',R(L.okmsg));f.reset()}catch(e){show('err',L.errmsg)}return}
+ if(L.email){const lines=Object.entries(o).map(([k,v])=>k+': '+[].concat(v).join(', '));
+   location.href='mailto:'+L.email+'?subject='+encodeURIComponent('Data request '+ref)+'&body='+encodeURIComponent(lines.join('\n'));
+   show('info',R(L.mailmsg));return}
+ show('info',L.closedmsg)});
 })();

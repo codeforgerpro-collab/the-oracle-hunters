@@ -4,8 +4,8 @@
  "description": "Every prophecy, on the record.",
  "start_url": "./index.html",
  "display": "standalone",
- "background_color": "#090e1b",
- "theme_color": "#0b1121",
+ "background_color": "#FFFFFF",
+ "theme_color": "#0E2A47",
  "icons": [
   {
    "src": "assets/icon-192.png",
