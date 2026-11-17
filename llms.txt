@@ -1,0 +1,39 @@
+# The Oracle Hunters
+
+> The Oracle Hunters records what governments, central banks, international institutions and senior public figures say about the future, keeps each statement with its official source, and checks the ones that can be checked against official data once they fall due. Every prophecy, on the record. Under development: figures and pages may change while the method is finalised. A Tekmerion project.
+
+## Facts
+
+- Statements on record: 79,826 from 2,421 speakers, collected from 334 sources (85,715 documents read).
+- Checkable statements now due: 16,507; checked so far: 497. Statements too vague to check are kept and labelled, never scored.
+- Checking rules version 4: an outcome is decided only against an official figure (IMF, World Bank, OECD, BIS, Eurostat, FRED and national statistics) under published rules; doubtful cases are left open, not guessed.
+- Every quoted source is also kept as an Internet Archive copy; the record is sealed daily so later changes show as corrections.
+- Quotes are of public figures in their public role. Corrections and replies: see the Corrections page.
+- Sitemap: https://codeforgerpro-collab.github.io/the-oracle-hunters/sitemap.xml. Feed: https://codeforgerpro-collab.github.io/the-oracle-hunters/feed.xml. Machine-readable totals: https://codeforgerpro-collab.github.io/the-oracle-hunters/data/status.json.
+- Owner: Tekmerion (https://codeforgerpro-collab.github.io/tekmerion-suite/). Related: ATHENA Glaux Intelligence (https://athenaglauxintelligence.news/).
+
+## Pages
+
+- [Home](https://codeforgerpro-collab.github.io/the-oracle-hunters/index.html): The latest statements about the future, with the record so far.
+- [Forecasts](https://codeforgerpro-collab.github.io/the-oracle-hunters/forecasts.html): Statements that can be checked, with their due dates and outcomes.
+- [Ledger](https://codeforgerpro-collab.github.io/the-oracle-hunters/ledger.html): Every checked statement and its verdict, newest first.
+- [Speakers](https://codeforgerpro-collab.github.io/the-oracle-hunters/speakers.html): Governments, central banks, institutions and people quoted, each with a record page.
+- [AI board](https://codeforgerpro-collab.github.io/the-oracle-hunters/ai-board.html): How AI models' own forecasts compare with the official ones.
+- [Analytics](https://codeforgerpro-collab.github.io/the-oracle-hunters/analytics.html): Totals, shares checked and calibration over time.
+- [Markets](https://codeforgerpro-collab.github.io/the-oracle-hunters/markets.html): Market-related forecasts and how they turned out.
+- [U-turns](https://codeforgerpro-collab.github.io/the-oracle-hunters/uturns.html): Where a speaker later said the opposite of an earlier statement.
+- [Methodology](https://codeforgerpro-collab.github.io/the-oracle-hunters/methodology.html): How statements are collected, classified and checked (checking rules version 4).
+- [Trust](https://codeforgerpro-collab.github.io/the-oracle-hunters/trust.html): Independence, funding, the right of reply and what is not done.
+- [Transparency](https://codeforgerpro-collab.github.io/the-oracle-hunters/transparency.html): What is collected, from where, and how much has been checked.
+- [Sources](https://codeforgerpro-collab.github.io/the-oracle-hunters/sources.html): The official and public sources read by the program.
+- [Seals](https://codeforgerpro-collab.github.io/the-oracle-hunters/seals.html): Daily tamper-evident seals of the record, anchored to Bitcoin blocks.
+- [Change history](https://codeforgerpro-collab.github.io/the-oracle-hunters/changes.html): Every change to the record, dated.
+- [Corrections](https://codeforgerpro-collab.github.io/the-oracle-hunters/corrections.html): The right-of-reply policy and every correction made.
+- [Guide](https://codeforgerpro-collab.github.io/the-oracle-hunters/guide.html): How to read the pages and the verdicts.
+- [About](https://codeforgerpro-collab.github.io/the-oracle-hunters/about.html): Who runs the site.
+- [Ελληνικά](https://codeforgerpro-collab.github.io/the-oracle-hunters/el/index.html): The main pages in Greek.
+- [News feed (RSS)](https://codeforgerpro-collab.github.io/the-oracle-hunters/feed.xml): The newest statements as a feed.
+
+## Optional
+
+- [Understanding the Oracle](https://codeforgerpro-collab.github.io/the-oracle-hunters/understanding-the-oracle.html): An interactive companion on the words, maths and limits of prediction.
